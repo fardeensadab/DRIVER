@@ -1,0 +1,7 @@
+{
+  "name": "file-saver.js",
+  "version": "1.20150507.2",
+  "description": "FileSaver.js by Eli Grey (eligrey/FileSaver.js at commit babc6d9, 2015-05-07). Local copy because the bower-packaged fork Teleborder/FileSaver.js was removed from GitHub.",
+  "main": "FileSaver.js",
+  "license": "MIT"
+}

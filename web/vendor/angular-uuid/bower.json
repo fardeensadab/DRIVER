@@ -1,0 +1,9 @@
+{
+  "name": "angular-uuid",
+  "version": "0.1.1",
+  "description": "Local drop-in replacement for ajsd/angular-uuid (the original GitHub repository no longer exists). Provides module 'uuid' with service 'uuid4'.",
+  "main": "angular-uuid.js",
+  "dependencies": {
+    "angular": ">=1.2"
+  }
+}

@@ -1,0 +1,15 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - name: Update APT cache
+      apt: update_cache=yes
+
+  roles:
+    - { role: "azavea.python-security", when: 'ansible_python_version is version("2.7.9", "<")' }
+    - { role: "azavea.docker" }
+
+  tasks:
+    - name: Bring up a test container
+      command: docker run busybox sh
+      become: yes

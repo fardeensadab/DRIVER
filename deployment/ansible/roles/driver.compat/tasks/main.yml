@@ -1,0 +1,129 @@
+---
+# Compatibility fixes for running the 2019-era Ubuntu 14.04 VMs in 2026.
+# Added by the local install patch set (see INSTALL-NOTES.md at repo root).
+
+- name: Remove Ubuntu ESM apt sources (unreachable without a subscription; break apt-get update)
+  shell: rm -f /etc/apt/sources.list.d/*esm*.list
+  args:
+    warn: false
+  changed_when: false
+
+- name: Make sure the en_US.UTF-8 locale exists (PostgreSQL config uses it)
+  command: locale-gen en_US.UTF-8
+  changed_when: false
+
+- name: Create directory for an up-to-date Mozilla CA bundle
+  file: path=/usr/local/share/ca-certificates/driver-compat state=directory mode=0755
+
+- name: Copy up-to-date Mozilla CA bundle (Ubuntu 14.04's bundle predates Let's Encrypt ISRG Root X1 etc.)
+  copy: src=mozilla-cacert.pem dest=/usr/local/share/ca-certificates/driver-compat/bundle.pem mode=0644
+  register: compat_bundle
+
+- name: Split CA bundle into individual certificates
+  shell: >
+    cd /usr/local/share/ca-certificates/driver-compat &&
+    rm -f cert-*.crt &&
+    awk 'BEGIN{n=0} /BEGIN CERTIFICATE/{n++; f=sprintf("cert-%03d.crt", n)} f{print > f} /END CERTIFICATE/{close(f); f=""}' bundle.pem &&
+    mv bundle.pem bundle.pem.src
+  when: compat_bundle is changed
+
+- name: Distrust expired DST Root CA X3 (breaks Let's Encrypt chains on OpenSSL 1.0.1)
+  replace:
+    path: /etc/ca-certificates.conf
+    regexp: '^mozilla/DST_Root_CA_X3\.crt$'
+    replace: '!mozilla/DST_Root_CA_X3.crt'
+  register: compat_dst
+
+- name: Rebuild system CA store
+  command: update-ca-certificates --fresh
+  when: compat_bundle is changed or compat_dst is changed
+
+# Python 2.7.6 on Ubuntu 14.04 has no TLS SNI support, and almost every HTTPS
+# server (PyPI, GitHub, ...) now requires SNI. Install pip 1.5 from apt plus
+# pyOpenSSL/ndg-httpsclient so pip can use SNI. Downloads done by Ansible
+# itself are switched to curl in the individual roles.
+- name: Refresh APT package lists
+  apt: update_cache=yes
+
+- name: Install curl, pip and Python TLS SNI support packages
+  apt:
+    pkg: [curl, python-pip, python-openssl, python-pyasn1, python-urllib3, python-requests]
+    state: present
+
+- name: Download ndg-httpsclient wheel (not packaged for Ubuntu 14.04)
+  shell: >
+    curl -fsSL -o /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
+    https://files.pythonhosted.org/packages/64/05/3b7b745509609e4a756792610c4246350342ad12585d399b9290e04aa26f/ndg_httpsclient-0.4.3-py2-none-any.whl &&
+    echo "5b1e1b1991990487e28e5b95e062c9d06f8f00e3cd79eaddc448ce06c5e3b776  /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl" | sha256sum -c -
+  args:
+    creates: /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
+    warn: false
+
+- name: Install ndg-httpsclient (enables SNI for pip)
+  shell: pip install --no-deps --no-index /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
+  args:
+    creates: /usr/local/lib/python2.7/dist-packages/ndg/httpsclient
+
+# The PostgreSQL apt archive for Ubuntu 14.04 (apt-archive.postgresql.org) is
+# HTTPS-only, and Ubuntu 14.04's apt HTTPS transport (GnuTLS 2.12) cannot talk
+# to it. Build a small local apt repository instead: the (frozen) index files
+# ship with this role, and the exact .deb files are fetched with curl.
+- name: Create local PostgreSQL apt mirror (database server only)
+  copy: src=pgdg-mirror/ dest=/var/cache/pgdg-mirror/
+  when: inventory_hostname in groups['database-servers']
+
+- name: Download PostgreSQL/PostGIS packages into the local mirror
+  shell: |
+    set -e
+    cd /var/cache/pgdg-mirror
+    IDX=dists/trusty-pgdg/main/binary-amd64/Packages
+    for spec in {{ pgdg_mirror_packages | join(' ') }}; do
+      name="${spec%%=*}"; ver="${spec#*=}"
+      set -- $(awk -v n="$name" -v v="$ver" '
+        /^Package: /{p=$2} /^Version: /{ver=$2} /^Filename: /{fn=$2}
+        /^SHA256: /{ if (p==n && ver==v) { print fn, $2; exit } }' "$IDX")
+      fn="$1"; sum="$2"
+      [ -n "$fn" ] || { echo "package $spec not in index" >&2; exit 1; }
+      if [ ! -f "$fn" ]; then
+        mkdir -p "$(dirname "$fn")"
+        curl -fsSL -o "$fn.part" "https://apt-archive.postgresql.org/pub/repos/apt/$fn"
+        echo "$sum  $fn.part" | sha256sum -c - >/dev/null
+        mv "$fn.part" "$fn"
+      fi
+    done
+  args:
+    executable: /bin/bash
+    warn: false
+  when: inventory_hostname in groups['database-servers']
+
+# The PostgreSQL apt archive for Ubuntu 14.04 (apt-archive.postgresql.org) is
+# HTTPS-only, and Ubuntu 14.04's apt HTTPS transport (GnuTLS 2.12) cannot talk
+# to it. Build a small local apt repository instead: the (frozen) index files
+# ship with this role, and the exact .deb files are fetched with curl.
+- name: Create local PostgreSQL apt mirror (database server only)
+  copy: src=pgdg-mirror/ dest=/var/cache/pgdg-mirror/
+  when: inventory_hostname in groups['database-servers']
+
+- name: Download PostgreSQL/PostGIS packages into the local mirror
+  shell: |
+    set -e
+    cd /var/cache/pgdg-mirror
+    IDX=dists/trusty-pgdg/main/binary-amd64/Packages
+    for spec in {{ pgdg_mirror_packages | join(' ') }}; do
+      name="${spec%%=*}"; ver="${spec#*=}"
+      set -- $(awk -v n="$name" -v v="$ver" '
+        /^Package: /{p=$2} /^Version: /{ver=$2} /^Filename: /{fn=$2}
+        /^SHA256: /{ if (p==n && ver==v) { print fn, $2; exit } }' "$IDX")
+      fn="$1"; sum="$2"
+      [ -n "$fn" ] || { echo "package $spec not in index" >&2; exit 1; }
+      if [ ! -f "$fn" ]; then
+        mkdir -p "$(dirname "$fn")"
+        curl -fsSL -o "$fn.part" "https://apt-archive.postgresql.org/pub/repos/apt/$fn"
+        echo "$sum  $fn.part" | sha256sum -c - >/dev/null
+        mv "$fn.part" "$fn"
+      fi
+    done
+  args:
+    executable: /bin/bash
+    warn: false
+  when: inventory_hostname in groups['database-servers']

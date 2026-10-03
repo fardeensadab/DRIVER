@@ -34,6 +34,14 @@ ANSIBLE_GROUPS = {
   "database-servers" => [ "database" ],
   "celery-servers" => [ "celery" ]
 }
+# Local install patch: modern OpenSSH clients (8.8+) refuse SHA-1 "ssh-rsa"
+# signatures, the only RSA kind the Ubuntu 14.04 guests understand. Re-enable
+# it for Ansible's connections in case an RSA key is used.
+ANSIBLE_RAW_SSH_ARGS = [
+  "-o PubkeyAcceptedKeyTypes=+ssh-rsa",
+  "-o HostKeyAlgorithms=+ssh-rsa"
+]
+
 MOUNT_OPTIONS = if Vagrant::Util::Platform.linux? then
                   ['rw', 'tcp', 'nolock']
                 else
@@ -68,6 +76,8 @@ Vagrant.configure("2") do |config|
       ansible.playbook = "deployment/ansible/database.yml"
       ansible.groups = ANSIBLE_GROUPS.merge(ANSIBLE_ENV_GROUPS)
       ansible.raw_arguments = ["--timeout=60"]
+      ansible.raw_ssh_args = ANSIBLE_RAW_SSH_ARGS
+      ansible.compatibility_mode = "2.0"
     end
 
     database.ssh.forward_x11 = true
@@ -113,6 +123,8 @@ Vagrant.configure("2") do |config|
       ansible.groups = ANSIBLE_GROUPS.merge(ANSIBLE_ENV_GROUPS)
       ansible.limit = "all"
       ansible.raw_arguments = ["--timeout=60"]
+      ansible.raw_ssh_args = ANSIBLE_RAW_SSH_ARGS
+      ansible.compatibility_mode = "2.0"
     end
 
     app.ssh.forward_x11 = true
@@ -146,6 +158,8 @@ Vagrant.configure("2") do |config|
       ansible.groups = ANSIBLE_GROUPS.merge(ANSIBLE_ENV_GROUPS)
       ansible.limit = "all"
       ansible.raw_arguments = ["--timeout=60"]
+      ansible.raw_ssh_args = ANSIBLE_RAW_SSH_ARGS
+      ansible.compatibility_mode = "2.0"
     end
 
     celery.ssh.forward_x11 = true

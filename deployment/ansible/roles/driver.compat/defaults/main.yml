@@ -1,0 +1,14 @@
+---
+pgdg_mirror_packages:
+  - libpq5=11.3-1.pgdg14.04+1
+  - libpq-dev=11.3-1.pgdg14.04+1
+  - pgdg-keyring=2018.2
+  - postgresql-client-common=201.pgdg14.04+1
+  - postgresql-common=201.pgdg14.04+1
+  - postgresql-client-9.4=9.4.22-1.pgdg14.04+1
+  - postgresql-9.4=9.4.22-1.pgdg14.04+1
+  - postgresql-contrib-9.4=9.4.22-1.pgdg14.04+1
+  - postgresql-server-dev-9.4=9.4.22-1.pgdg14.04+1
+  - liblwgeom-2.3-0=2.3.3+dfsg-1.pgdg14.04+1
+  - postgresql-9.4-postgis-2.3=2.3.3+dfsg-1.pgdg14.04+1
+  - postgresql-9.4-postgis-2.3-scripts=2.3.3+dfsg-1.pgdg14.04+1

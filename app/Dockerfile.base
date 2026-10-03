@@ -2,8 +2,17 @@ FROM quay.io/azavea/django:1.11-python2.7-slim
 
 ENV DOCKER_VERSION 17.06.2
 
+# Local install patch: Debian 10 (buster) and 8 (jessie) moved to
+# archive.debian.org, and the PostgreSQL apt repo for buster moved to
+# apt-archive.postgresql.org.
+RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
+    echo "deb https://apt-archive.postgresql.org/pub/repos/apt buster-pgdg main 10" > /etc/apt/sources.list.d/pgdg.list && \
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99archive
+
 # install libgdal1-dev
-RUN echo "deb http://deb.debian.org/debian jessie main contrib non-free " > /etc/apt/sources.list.d/jessie.list
+# (jessie's archive signing keys have expired, hence trusted=yes)
+RUN echo "deb [trusted=yes] http://archive.debian.org/debian jessie main contrib non-free " > /etc/apt/sources.list.d/jessie.list
 RUN set -ex && \
     apt-get update && \
     apt-get install -y --no-install-recommends libgdal1-dev && \
@@ -46,7 +55,7 @@ WORKDIR /opt/app
 
 COPY . /opt/app
 
-RUN pip install --no-cache-dir djsonb -r requirements.txt
+RUN pip install --no-cache-dir -c constraints-py27.txt djsonb -r requirements.txt
 
 EXPOSE 4000
 

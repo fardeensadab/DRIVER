@@ -1,0 +1,37 @@
+---
+# Local install patch: Ubuntu 14.04's apt HTTPS transport (GnuTLS 2.12) can no
+# longer negotiate TLS with many modern servers, so instead of adding the
+# https://download.docker.com apt repository we download the .deb with
+# curl (OpenSSL, with SNI) and install it directly.
+
+- name: Install Docker dependencies and recommended packages
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - iptables
+    - libltdl7
+    - libsystemd-journal0
+    - aufs-tools
+    - cgroup-lite
+    - git
+    - xz-utils
+    - apparmor
+
+- name: Install kernel extras (provides the aufs module used by Docker)
+  apt: pkg="linux-image-extra-{{ ansible_kernel }}" state=present
+  ignore_errors: yes
+
+- name: Download Docker package
+  shell: >
+    curl -fsSL -o "/var/cache/{{ docker_package_name }}_{{ docker_deb_version }}_amd64.deb"
+    "{{ docker_repository_url }}/dists/{{ ansible_distribution_release }}/pool/stable/amd64/{{ docker_package_name }}_{{ docker_deb_version }}_amd64.deb"
+  args:
+    creates: "/var/cache/{{ docker_package_name }}_{{ docker_deb_version }}_amd64.deb"
+    warn: false
+
+- name: Install Docker
+  apt: deb="/var/cache/{{ docker_package_name }}_{{ docker_deb_version }}_amd64.deb" state=present
+
+- name: Configure Docker
+  template: src=docker.j2 dest=/etc/default/docker
+  notify:
+    - Restart Docker

@@ -1,0 +1,22 @@
+---
+- name: Get installed pip version
+  command: pip --version
+  register: pip_version_output
+  ignore_errors: yes
+  changed_when: false
+
+- name: Download get-pip.py
+  # Local install patch: curl instead of get_url (Python 2.7.6 lacks TLS SNI)
+  shell: curl -fsSL -o /tmp/get-pip.py https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  args:
+    warn: false
+  when: pip_version_output is failed or not pip_version_output.stdout is search(pip_version)
+
+# Install pip if it's not already installed, or if
+# the desired versions of pip aren't installed
+# The regular expression extracts '9.0' out of '9.0.*'
+- name: Install pip
+  command: "python get-pip.py pip=={{ pip_version }}"
+  when:  pip_version_output is failed or not pip_version_output.stdout is search(pip_version)
+  args:
+    chdir: /tmp

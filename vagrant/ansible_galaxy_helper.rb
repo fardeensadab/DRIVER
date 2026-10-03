@@ -5,7 +5,7 @@ module AnsibleGalaxyHelper
   def self.galaxy_install_info(role_path)
     galaxy_install_info = File.join(role_path, "meta", ".galaxy_install_info")
 
-    if (File.directory?(role_path) || File.symlink?(role_path)) && File.exists?(galaxy_install_info)
+    if (File.directory?(role_path) || File.symlink?(role_path)) && File.exist?(galaxy_install_info)
       YAML.load_file(galaxy_install_info)
     else
       { install_date: "", version: "0.0.0" }

@@ -1,0 +1,10 @@
+{
+  "name": "ng-debounce",
+  "version": "0.1.7",
+  "description": "Local copy of shahata/angular-debounce (original GitHub repository removed). Provides module 'debounce'.",
+  "main": "angular-debounce.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": ">=1.2"
+  }
+}

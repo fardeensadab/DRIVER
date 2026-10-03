@@ -1,5 +1,12 @@
 ---
 
+# Local install patch: refresh CA certificates and apt sources on the old
+# Ubuntu 14.04 VMs before anything is downloaded.
+- hosts: all
+  become: True
+  roles:
+    - { role: "driver.compat" }
+
 # Installs packages/dependencies for web servers
 
 - hosts: all

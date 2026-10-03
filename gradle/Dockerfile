@@ -6,10 +6,17 @@
 FROM openjdk:8-jdk
 MAINTAINER Kathryn Killebrew <kkillebrew@azavea.com>
 
+# Local install patch: Debian 11 (bullseye) reached end of life and is moving to
+# archive.debian.org; use the archive (main + updates) so package installs keep working.
+RUN echo "deb http://archive.debian.org/debian bullseye main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
+    rm -f /etc/apt/sources.list.d/*.list && \
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99archive
+
 RUN apt-get update && apt-get install -yq apt-utils
 
 # make pkg install non-interactive without disabling it for the whole container
-RUN DEBIAN_FRONTEND=noninteractive && apt-get install -yq redis-tools python3-redis zip \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq redis-tools python3-redis zip \
     ca-certificates ca-certificates-java haveged
 
 # install gradle
