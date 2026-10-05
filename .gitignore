@@ -80,3 +80,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Local install files (not for the repository)
+install.log
+logs/
+_local/
+app/_loaders/

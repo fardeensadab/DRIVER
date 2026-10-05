@@ -1,294 +1,198 @@
-# DRIVER
-DRIVER - Data for Road Incident Visualization, Evaluation, and Reporting
+# DRIVER: Road Crash Data System (2026 installable edition)
 
-[![Build Status](https://travis-ci.org/WorldBank-Transport/DRIVER.svg?branch=develop)](https://travis-ci.org/WorldBank-Transport/DRIVER)
+**DRIVER** (Data for Road Incident Visualization, Evaluation, and Reporting) is an open-source
+web platform for recording, mapping and analysing road crashes. It was originally built by
+[Azavea](https://www.azavea.com/) for the World Bank:
+https://github.com/WorldBank-Transport/DRIVER
 
-## Deploying
+The original project was last updated in 2019 (release 2.0.5) and no longer installs on a
+current computer: old download sites are gone, software versions have moved on, and many
+dependencies were deleted. **This fork adds 33 compatibility fixes and a one-command
+installer**, tested end to end on Ubuntu 22.04 in October 2026. What was changed and why is
+documented in [`DRIVER-INSTALLATION-REPORT.md`](DRIVER-INSTALLATION-REPORT.md).
 
-1. Follow the Installation instructions below
-2. Follow the instructions in doc/system-administration.md
+With DRIVER you can:
 
-## Developing
+- record crashes with location, date/time, severity, vehicles, people and photos
+- design your own data-entry forms in a schema editor
+- see crashes on a map (points, heatmap) and filter by area, date and any field
+- find **black spots** (high-risk locations) and estimate the **economic cost** of crashes
+- build summary reports and export data to CSV
 
-### Installation
+---
 
-1. Install Vagrant 1.5+
+## Tested environment
 
-1. Install Ansible 1.8+
+### Your computer (the host)
 
-1. Install `vagrant-hostmanager` plugin via:
+| Item | Version used for testing |
+|---|---|
+| Operating system | **Ubuntu 22.04.5 LTS** (x86_64), kernel 6.8.0 (HWE) |
+| Hardware | 20-core Intel CPU with VT-x, 15 GB RAM, Secure Boot **on** |
+| VirtualBox | **7.1.18** (Oracle build, installed by the installer) |
+| Vagrant | **2.4.9** (HashiCorp) |
+| vagrant-hostmanager plugin | **1.8.10** |
+| Python (in `~/driver-venv`) | **3.8.20**, installed with uv 0.12.22 |
+| Ansible | **2.9.27** |
+| NFS server | nfs-kernel-server 2.6.1 |
 
-    ```bash
-    vagrant plugin install vagrant-hostmanager
-    ```
+Other recent Ubuntu/Debian releases on x86_64 should work, but only 22.04 was tested.
+Apple Silicon Macs and Windows are **not** supported.
 
-1. Prevent changes in `group_vars/development` from being tracked by git.
+### Inside DRIVER (installed automatically)
 
-    - You will likely make changes to `group_vars/development` to configure your local environment. To make sure you don't commit those changes unless you need to change the default development settings, you can make git not track changes to that file. To do this, run `git update-index --assume-unchanged deployment/ansible/group_vars/development`.
-    - To revert back to tracking changes, run `git update-index --no-assume-unchanged deployment/ansible/group_vars/development`.
+| Part | Version |
+|---|---|
+| DRIVER | 2.0.5 + fixes (branch `local-install-fixes`) |
+| Virtual machines | 3 × Ubuntu 14.04 (`ubuntu/trusty64` v20191107.0.0) |
+| Database | PostgreSQL 9.4.22 + PostGIS 2.3.3, Redis 2.8.4 |
+| Containers | Docker CE 17.06.2 |
+| Backend | Django 1.11.26 on Python 2.7.17, Celery 3.1.19 |
+| Frontend | AngularJS 1.5, Leaflet 0.7 (built with Node 8.17) |
+| Web server | nginx 1.4.6 |
+| Black-spot analysis | R 3.5.0 (caret, gbm, …) |
+| Base map | Esri World Street Map (no API key needed) |
 
-1. Create `gradle/data/driver.keystore`
+### Requirements
 
-    - To run in development without support for JAR file building:
-      ```bash
-      touch gradle/data/driver.keystore
-      ```
-      (If you just want to install the DRIVER web interface, do this. You can add Android integration later.)
+- Ubuntu/Debian on an **x86_64** computer, with **CPU virtualization (VT-x / AMD-V) enabled** in BIOS/UEFI
+- **16 GB RAM** recommended (10 GB minimum: the installer then uses smaller VMs)
+- **30 GB free disk space**
+- Internet access and an account with `sudo` rights
 
-    - To build schema model JAR files for the Android app, copy the signing keystore to `gradle/data/driver.keystore`
-    and set the password for the keystore under `keystore_password` in `deployment/ansible/group_vars/development`.
+---
 
-1. (Optional) To enable geocoding, [set up Pickpoint in `group_vars/development`](#pickpoint)
-
-1. Install [NFS](https://en.wikipedia.org/wiki/Network_File_System). On Debian/Ubuntu, run:
-
-    ```bash
-    sudo apt-get install nfs-common nfs-kernel-server
-    ```
-
-1. Start the Vagrant VM
-    ```bash
-    vagrant up
-    ```
-
-    If you run into issues provisioning the VMs or forget a step, try re-provisioning as needed:
-    ```bash
-    vagrant provision <vm-name>
-    ```
-
-### Pickpoint
-
-Pickpoint is a geocoding service used by DRIVER to obtain lat/lon coordinates from input addresses. DRIVER can work without Pickpoint configured, but to enable geocoding, obtain a pickpoint API key from https://pickpoint.io and enter the key in `deployment/ansible/group_vars/development` under `web_js_nominatim_key`.
-
-### Running & Configuration
-
-The app is available on http://localhost:7000/, and the schema editor at http://localhost:7000/editor/.
-
-In development environments a default Django superuser will be created for you:
-  - Username: `admin`
-  - Password: `admin`
-
-### Google OAuth
-
-To configure Google OAuth for development, follow [these steps](https://support.google.com/googleapi/answer/6158849?hl=en&ref_topic=7013279) to create a web application and credentials for your local DRIVER instance.
-
-When creating a client ID for your web application, use these URLs:
-
-**Authorized JavaScript origins**:
-
-http://localhost:7000
-
-**Authorized redirect URIs**:
-
-http://localhost:7000/openid/callback/login/
-
-Once you have the client ID and client secret, add those values to `deployment/ansible/group_vars/development` and reprovision the `app` VM  as needed:
-```bash
-vagrant provision app
-```
-
-### Frontend
-Both Angular apps can be run in development mode via:
-```bash
-./scripts/grunt.sh editor serve
-```
-and
-```bash
-./scripts/grunt.sh web serve
-```
-You will need to run these commands in separate terminals if you'd like to have both running at the same time.
-
-The frontend app will be available on port 7002 at http://localhost:7002 and the schema editor will be available on port
-7001 at http://localhost:7001. Both will reload automatically as changes are made.
-
-To make requests to a Django runserver directly (for example, to perform interactive debugging in
-the request-response cycle), run:
-```bash
-./scripts/manage.sh runserver 0.0.0.0:8000
-```
-You should then be able to access the Django runserver on port 3001 of the `app` VM at http://localhost:3001.
-
-Front end files are mounted inside the `app` Vagrant VM at `/opt/schema_editor` for the Angular editor and `/opt/web` for the Angular interface.
-
-#### Updating existing translation files
-New Angular translation tokens should be added to i18n/exclaim.json with a value of "!<english>".
-The English translation (en-us.json) is automatically built from exclaim.json. New tokens are also
-propagated to other translations via a grunt task:
+## Installation
 
 ```bash
-./scripts/grunt.sh web translate
+git clone -b local-install-fixes https://github.com/fardeensadab/DRIVER.git ~/DRIVER
+cd ~/DRIVER
+bash install.sh
 ```
 
-#### Adding a new translation file
-Place the new JSON file in the i18n folder. Add the file to the i18nForeignLanguages var in Gruntfile.js.
-To enable the language to be selected via the language picker, add an item to the `languages` list in
-`deployment/ansible/group_vars/development`. Setting `rtl` to true will enable right-to-left CSS changes.
+The installer runs 8 steps and can safely be run again. If something stops it, fix the cause
+and run `bash install.sh` again: it continues where it left off.
 
+| Step | What it does |
+|---|---|
+| 1 | Checks the computer (CPU virtualization, RAM, disk) |
+| 2 | Installs Oracle VirtualBox 7.1, NFS and build tools |
+| 3 | Installs Vagrant and the vagrant-hostmanager plugin |
+| 4 | Allows DRIVER's VM network `192.168.12.0/24` in VirtualBox |
+| 5 | Installs uv → Python 3.8 → Ansible 2.9.27 in `~/driver-venv` |
+| 6 | Checks the DRIVER source and fixes |
+| 7 | Creates and sets up the 3 VMs (**30–90 minutes** the first time) |
+| 8 | Checks that http://localhost:7000 answers |
 
-### Docker
-To update the Docker container images to reflect environment changes (Such as changed Python packages), provision the `app` VM:
-```bash
-vagrant provision app
+Things to expect:
+
+- **Your sudo password** is asked a few times, including once by Vagrant to set up shared folders.
+- **Secure Boot on?** The installer stops once and asks you to choose a temporary password.
+  Reboot, choose **Enroll MOK → Continue → Yes** on the blue screen, enter the password, then
+  run `bash install.sh` again.
+- Long periods without output during step 7 are normal (Docker images are being built).
+- Everything is logged to `install.log`.
+
+When it finishes:
+
+| | |
+|---|---|
+| Web app | http://localhost:7000/ |
+| Schema editor | http://localhost:7000/editor/ |
+| Django admin | http://localhost:7000/admin/ |
+| Login | `admin` / `admin` (change it, see below) |
+
+---
+
+## Everyday use
+
+| Task | Command (in `~/DRIVER`) |
+|---|---|
+| **Start** DRIVER after a reboot | `bash start-driver.sh` |
+| **Stop** DRIVER (before shutting down) | `vagrant halt` |
+| Status of the VMs | `vagrant status` |
+| Shell inside a VM | `vagrant ssh app` (or `database`, `celery`) |
+| Re-apply configuration | `source ~/driver-venv/bin/activate && vagrant provision app` |
+
+`start-driver.sh` also unloads the KVM kernel module, which loads at every boot and blocks
+VirtualBox.
+
+---
+
+## First-time setup
+
+DRIVER starts empty. Set it up in the **editor** (http://localhost:7000/editor/):
+
+1. **Change the admin password:** http://localhost:7000/admin/ → Users → admin → "this form".
+2. **Create the crash form:** *Add a new record type* with the single title **`Incident`**
+   (exactly this word, because the web app looks for it). Then *View related content → Edit*
+   to add fields such as Severity (select list: Fatal / Injury / Property), Collision type and
+   number of vehicles. Add sections like *Vehicles* and *People* with **Allow multiple** ticked.
+3. **Upload boundaries:** *Add new geographies* → a zipped shapefile (e.g. districts) → pick the name field.
+4. **Set costs:** *Incident → Cost aggregation settings* → content type *Incident Details*,
+   field *Severity*, a cost per level.
+5. **Add users:** *Manage Users*, with groups admin / analyst (can edit) / public (read-only).
+
+Then enter crashes in the **web app** with the **⊕** button in the filter bar, or at
+http://localhost:7000/#!/add.
+
+### Practice data
+
+[`dummy-data/`](dummy-data/) has dummy Bangladesh division boundaries and 600 dummy crashes,
+with a one-command loader. See [`dummy-data/README.md`](dummy-data/README.md).
+
+### Regional settings
+
+Time zone, country and map centre are set in `deployment/ansible/group_vars/development`
+(defaults: `Asia/Manila`, `ph`). For Bangladesh, for example:
+
+```yaml
+local_time_zone_id: 'Asia/Dhaka'
+local_country_code: 'bd'
+local_center_lat_lon: [23.7, 90.4]
+osm_extract_url: 'https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf'
 ```
 
-### Testing
+Then run `source ~/driver-venv/bin/activate && vagrant provision app`.
 
-#### Javascript
-To run the Javascript automated tests, use:
-```bash
-./scripts/grunt.sh web test
-```
+---
 
-## Testing Data
+## Troubleshooting
 
-### Boundaries
-Geographic boundaries are used to filter records to a defined area, such as a region or state. These boundaries are created by uploading shape files to the editor, http://localhost:7000/editor under "Add new geographies".
+| Problem | Fix |
+|---|---|
+| Installer says *vboxdrv not loaded*, Secure Boot on | Follow its MOK instructions, reboot, enroll the key, run `bash install.sh` again |
+| VM state `gurumeditation` | Usually old VirtualBox: the installer replaces Ubuntu's 6.1 with Oracle 7.1 and recreates the VM |
+| A setup step hangs on a download | Press Ctrl+C, then `vagrant reload <vm>` and `bash install.sh` |
+| *Could not get lock /var/lib/apt/…* | Automatic updates are running; the installer waits for them |
+| Site doesn't load after a reboot | Run `bash start-driver.sh`; if it's still down after a few minutes: `vagrant reload app` |
+| Maps blank or old after an update | Open the site in a private window, or clear the browser cache |
+| Save button in the editor does nothing | A field on the page is incomplete (no title, empty option, duplicate name); fix the field marked in red |
 
-For developers at Azavea, use the `regions.zip` and `states.zip` files available in the DRIVER project folder on the fileshare. For non-Azavea users, upload a zipped shapefile containing the boundaries of the jurisdictions where you plan to operate DRIVER. If you don't have such a shapefile, [Natural Earth](https://www.naturalearthdata.com/features/) is a good place to start."
+The full list of the 33 problems found and how each was fixed is in
+[`DRIVER-INSTALLATION-REPORT.md`](DRIVER-INSTALLATION-REPORT.md).
 
-After uploading each the file, select `name` as the display field, then hit save. Either refresh the page or navigate somewhere else in between uploads.
+---
 
-### Records
-Record data can be populated from a CSV file that contains named columns for `"lat"`, `"lon"`, and `"record_date"`. A file with semi-realistic data can be found in `scripts/sample_data/sample_traffic.csv` for use. For developers at Azavea, CSV files containing historical data can be downloaded from the `/data` folder of the project's directory in the fileshare, with names of the format `<city or agency>_traffic.csv`.
+## Repository layout
 
-In order to import record data you will have to obtain an Authorization header and its API token. To do this, log in to the web application, then open the network tab in web developer tools and reload the page. Inspect the request headers
-from an API request and pull out the value of the `Authorization` header, for example
-`Token f1acac96cc79c4822e9010d23ab425231d580875`.
+| Path | Contents |
+|---|---|
+| `install.sh`, `start-driver.sh` | Installer and start script (added in this fork) |
+| `DRIVER-INSTALLATION-REPORT.md` | Components, installation method, problems and fixes, dependency checklist |
+| `DRIVER-INSTALL-NOTES.md` | Short notes, sample-data loading and next steps |
+| `dummy-data/` | Practice boundaries and crashes |
+| `app/` | Django backend (API, auth, black spots) |
+| `web/` | Main web app (AngularJS) |
+| `schema_editor/` | Schema editor (AngularJS) |
+| `windshaft/` | Map tile server configuration |
+| `analysis_tasks/` | R black-spot analysis |
+| `gradle/` | Builds form JARs for the Android app |
+| `deployment/ansible/` | Ansible playbooks and roles (includes the `driver.compat` fixes role) |
+| `doc/` | Original documentation; the original README is [`doc/README-original.md`](doc/README-original.md) |
 
-Using the API token, run:
-```bash
-python scripts/load_incidents_v3.py --authz 'Token <YOUR_AUTH_TOKEN>' scripts/sample_data/
-```
-Note that the import process will take roughly two hours for the full data set; you can cut down the
-number of records with `head` on the individual CSVs.
+## Credits and license
 
-The `load_incidents_v3.py` script will also create a schema for you. If you already have a schema in place, and simply want to load data associated with that schema, you will need to modify the script accordingly: change the `schema_id = create_schema(...)` line with `schema_id = 'replace-this-with-the-existing-schema-id'`.
-
-To load mock black spots, run:
-```bash
-python scripts/load_black_spots.py --authz 'Token <YOUR_AUTH_TOKEN>' /path/to/black_spots.json
-```
-Mock black spot data is available in `scripts/sample_data/black_spots.json`.
-
-To load mock interventions, run:
-```bash
-python scripts/load_interventions.py --authz 'Token <YOUR_AUTH_TOKEN>' /path/to/interventions_sample_pts.geojson
-```
-Mock intervention data is available in `scripts/sample_data/interventions_sample_pts.geojson`.
-
-To generate black spot and load forecast training inputs, run:
-```bash
-python scripts/generate_training_input.py /path/to/roads.shp /path/to/records.csv
-```
-
-More information on the requirements for loading data can be found in the [`scripts/`
-directory](./scripts/README.md).
-
-### Costs
-
-You can't request records with associated costs successfully until you configure some costs.
-To do this, navigate to your editor (by default on http://localhost:7000/editor/), select "Incident" from
-record types in the menu on the left. (If there are multiple record types named "Incident", delete all but one.) Select "Cost aggregation settings", then:
-
-- Choose a currency prefix in "Cost Prefix" (e.g., `$`, but anything is fine)
-- Select "Incident Details" in "Related Content Type"
-- Choose "Severity" in "Field"
-- Then decide how much money you think human lives, human physical security, and property are worth
-
-## Production
-
-TODO: Notes on creating a production superuser and adding a production OAuth2 application
-
-
-## Using OAuth2 / Getting tokens
-
-Get a token:
-```bash
-curl -X POST -d "grant_type=password&username=<user_name>&password=<password>" -u"<client_id>:<client_secret>" http://localhost:7000/o/token/
-```
-
-Returns:
-```json
-{
-    "access_token": "<your_access_token>",
-    "token_type": "Bearer",
-    "expires_in": 36000,
-    "refresh_token": "<your_refresh_token>",
-    "scope": "read write groups"
-}
-```
-
-Note: If you're experiencing SSL errors with cURL, your version of cURL may not have the right certificate authorities installed. Try passing the `-k` parameter to `curl`.
-
-Making requests with a token:
-```bash
-# GET
-curl -H "Authorization: Bearer <your_access_token>" http://localhost:7000:/api/record/
-curl -H "Authorization: Bearer <your_access_token>" http://localhost:7000:/api/recordschema/
-```
-
-Restricted access (disabled in development to allow access to the browsable API):
-
-Add an additional `scope` parameter to token request:
-```bash
-curl -X POST -d "grant_type=password&username=<user_name>&password=<password>&scope=read" -u"<client_id>:<client_secret>" http://localhost:7000/o/token/
-```
-
-Now, this token will have read-only access to the API.
-
-## Releases
-
-Releases use a `github_changelog_generator` tool written in `ruby`.
-
-- Make sure your `develop` is up-to-date
-- Start the Gitflow release:
-    ```bash
-    git flow release start <your release version>
-    ```
--
-    ```bash
-    docker run -ti --rm -v ${PWD}:/changelog -w /changelog ruby:2.5 /bin/bash
-    ```
-- From the container:
-    ```bash
-    gem install github_changelog_generator
-    ```
-- Then, to generate the changelog since the last release:
-    ```bash
-    $ export RELEASE_VERSION=<your release version>
-    $ export LAST_RELEASE=<the most recent tag>
-    $ export GITHUB_TOKEN=<your github personal access token>
-    $ github_changelog_generator "WorldBank-Transport/DRIVER" \
-        --token ${GITHUB_TOKEN} \
-        --since-tag ${LAST_RELEASE} \
-        --future-release ${RELEASE_VERSION} \
-        --base CHANGELOG.md \
-        --no-issues \
-        --no-issues-wo-labels \
-        --no-author
-    ```
-
-It's important to include the `since-tag` argument, since without it, the changelog generator
-will include everything that went into 1.0.0, which is a lot of stuff and not super meaningful,
-since `1.0.0` is "what was there when we decided to start using semantic versioning."
-Note: We've had some problems with the `since-tag` argument not being respected; if this happens,
-manually delete the duplicate entries and update the GitHub diff link.
-
-- Include the CHANGELOG in your release branch
-- Git flow publish the release:
-    ```
-    git flow release publish <your release version>
-    ```
-- Open a PR for your release
-- Wait for a successful build and approval (from whom?), then:
-    ```bash
-    $ git flow release finish <your release version>
-    $ git checkout master
-    $ git tag -f <your version>  # git-flow puts the tag on `develop`
-    $ git push origin master
-    $ git checkout develop
-    $ git push origin develop
-    $ git push [-s] --tags
-    ```
-
-:tada:
+DRIVER was created by Azavea for the World Bank (WorldBank-Transport/DRIVER). This fork only
+adds compatibility fixes, installation tooling, documentation and dummy data.
+Licensed under the **GNU General Public License v3.0**; see [`LICENSE`](LICENSE).

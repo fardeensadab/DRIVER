@@ -3,7 +3,9 @@
 # and partially based on android docker:
 # https://github.com/gfx/docker-android-project/blob/master/Dockerfile
 
-FROM openjdk:8-jdk
+# Local install patch: Docker Hub has removed the deprecated openjdk:8-jdk tag;
+# the same image is still published on Amazon's public mirror of Docker Hub.
+FROM public.ecr.aws/docker/library/openjdk:8-jdk
 MAINTAINER Kathryn Killebrew <kkillebrew@azavea.com>
 
 # Local install patch: Debian 11 (bullseye) reached end of life and is moving to

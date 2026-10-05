@@ -121,7 +121,7 @@ Vagrant.configure("2") do |config|
     app.vm.provision "ansible" do |ansible|
       ansible.playbook = "deployment/ansible/app.yml"
       ansible.groups = ANSIBLE_GROUPS.merge(ANSIBLE_ENV_GROUPS)
-      ansible.limit = "all"
+      ansible.limit = "app,database"  # local install patch: was "all"; keeps a celery problem from blocking the app VM
       ansible.raw_arguments = ["--timeout=60"]
       ansible.raw_ssh_args = ANSIBLE_RAW_SSH_ARGS
       ansible.compatibility_mode = "2.0"
@@ -156,7 +156,7 @@ Vagrant.configure("2") do |config|
     celery.vm.provision "ansible" do |ansible|
       ansible.playbook = "deployment/ansible/celery.yml"
       ansible.groups = ANSIBLE_GROUPS.merge(ANSIBLE_ENV_GROUPS)
-      ansible.limit = "all"
+      ansible.limit = "celery"  # local install patch: was "all" (database firewall rules are applied by the app run)
       ansible.raw_arguments = ["--timeout=60"]
       ansible.raw_ssh_args = ANSIBLE_RAW_SSH_ARGS
       ansible.compatibility_mode = "2.0"

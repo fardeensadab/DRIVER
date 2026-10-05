@@ -1,10 +1,6 @@
 ---
-- name: Configure the PostgreSQL APT key
-  # Local install patch: curl instead of apt_key url= (Python 2.7.6 lacks TLS SNI)
-  shell: curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-  args:
-    warn: false
-  changed_when: false
+# Local install patch: no signing key needed - packages come from the local,
+# checksum-verified mirror built by driver.compat (see the repository line below).
 
 - name: Configure the PostgreSQL APT repositories
   apt_repository: repo="deb [trusted=yes] file:/var/cache/pgdg-mirror trusty-pgdg main"

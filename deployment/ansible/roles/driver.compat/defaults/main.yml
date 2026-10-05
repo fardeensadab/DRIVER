@@ -12,3 +12,14 @@ pgdg_mirror_packages:
   - liblwgeom-2.3-0=2.3.3+dfsg-1.pgdg14.04+1
   - postgresql-9.4-postgis-2.3=2.3.3+dfsg-1.pgdg14.04+1
   - postgresql-9.4-postgis-2.3-scripts=2.3.3+dfsg-1.pgdg14.04+1
+
+pip_local_packages:
+  - file: ndg_httpsclient-0.4.3-py2-none-any.whl
+    url: https://files.pythonhosted.org/packages/64/05/3b7b745509609e4a756792610c4246350342ad12585d399b9290e04aa26f/ndg_httpsclient-0.4.3-py2-none-any.whl
+    sha256: 5b1e1b1991990487e28e5b95e062c9d06f8f00e3cd79eaddc448ce06c5e3b776
+  - file: pyasn1-0.4.2-py2.py3-none-any.whl
+    url: https://files.pythonhosted.org/packages/ba/fe/02e3e2ee243966b143657fb8bd6bc97595841163b6d8c26820944acaec4d/pyasn1-0.4.2-py2.py3-none-any.whl
+    sha256: d5cd6ed995dba16fad0c521cfe31cd2d68400b53fcc2bce93326829be73ab6d1
+  - file: psycopg2-2.6.tar.gz
+    url: https://files.pythonhosted.org/packages/dd/c7/9016ff8ff69da269b1848276eebfb264af5badf6b38caad805426771f04d/psycopg2-2.6.tar.gz
+    sha256: c00afecb302a99a4f83dec9b055c4d1cc196926d62c8db015d68432df8118ca8

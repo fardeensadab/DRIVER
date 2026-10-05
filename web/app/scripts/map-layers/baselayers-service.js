@@ -16,9 +16,12 @@
 
         function streets() {
             var layer = new L.tileLayer(
-                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
+                // Local install patch: Carto basemaps (old and new URLs) now require an API key
+                // and only return "API KEY REQUIRED" tiles. Use Esri's keyless street map instead.
+                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',
                 {
-                    attribution: $translate.instant('MAP.CDB_ATTRIBUTION'),
+                    attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors, and the GIS User Community',
+                    maxZoom: 19,
                     detectRetina: false,
                     zIndex: 1
                 }

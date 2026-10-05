@@ -8,6 +8,23 @@
     warn: false
   changed_when: false
 
+- name: Make curl use IPv4, retry, and give up on stalled downloads (VirtualBox NAT has no IPv6 route)
+  copy:
+    dest: "{{ item }}"
+    mode: 0644
+    content: |
+      ipv4
+      retry = 5
+      retry-delay = 3
+      connect-timeout = 30
+      speed-limit = 1000
+      speed-time = 60
+  with_items:
+    - /root/.curlrc
+    - /home/vagrant/.curlrc
+    - /etc/skel/.curlrc
+  ignore_errors: yes
+
 - name: Make sure the en_US.UTF-8 locale exists (PostgreSQL config uses it)
   command: locale-gen en_US.UTF-8
   changed_when: false
@@ -50,17 +67,34 @@
     pkg: [curl, python-pip, python-openssl, python-pyasn1, python-urllib3, python-requests]
     state: present
 
-- name: Download ndg-httpsclient wheel (not packaged for Ubuntu 14.04)
-  shell: >
-    curl -fsSL -o /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
-    https://files.pythonhosted.org/packages/64/05/3b7b745509609e4a756792610c4246350342ad12585d399b9290e04aa26f/ndg_httpsclient-0.4.3-py2-none-any.whl &&
-    echo "5b1e1b1991990487e28e5b95e062c9d06f8f00e3cd79eaddc448ce06c5e3b776  /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl" | sha256sum -c -
+# pip 1.5 inside the VM can hang on slow/unstable connections to PyPI, so the
+# few Python packages the roles install with pip are fetched with curl into a
+# local directory (checksum-verified) and pip installs them from there.
+- name: Create local pip package directory
+  file: path=/var/cache/pip-local state=directory mode=0755
+
+- name: Download Python packages for the local pip directory
+  shell: |
+    set -e
+    cd /var/cache/pip-local
+    while read -r name url sum; do
+      [ -n "$name" ] || continue
+      if [ ! -f "$name" ]; then
+        curl -fsSL --retry 5 --retry-delay 3 --connect-timeout 30 --speed-limit 1000 --speed-time 60 --max-time 900 -o "$name.part" "$url"
+        echo "$sum  $name.part" | sha256sum -c - >/dev/null
+        mv "$name.part" "$name"
+      fi
+    done <<'LIST'
+    {% for p in pip_local_packages %}
+    {{ p.file }} {{ p.url }} {{ p.sha256 }}
+    {% endfor %}
+    LIST
   args:
-    creates: /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
+    executable: /bin/bash
     warn: false
 
 - name: Install ndg-httpsclient (enables SNI for pip)
-  shell: pip install --no-deps --no-index /var/cache/ndg_httpsclient-0.4.3-py2-none-any.whl
+  shell: pip install --no-deps --no-index /var/cache/pip-local/ndg_httpsclient-0.4.3-py2-none-any.whl
   args:
     creates: /usr/local/lib/python2.7/dist-packages/ndg/httpsclient
 

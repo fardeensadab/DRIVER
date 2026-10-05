@@ -1,0 +1,601 @@
+record_date,lat,lon,severity,collision_type,main_cause,num_vehicles,num_driver_casualties,num_passenger_casualties,num_pedestrian_casualties,surface_type,surface_condition,traffic_control,street_lights,description
+2026-04-07 11:08,24.861668,91.881378,Fatal,Hit pedestrian,Human error,1,2,4,3,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-04-08 06:44,23.951081,90.515366,Injury,Hit object in road,Human error,1,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-08 22:25,23.589801,90.325843,Injury,Rear end,Human error,3,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-09 17:58,24.739975,90.504239,Injury,Hit parked vehicle,Road defect,3,1,1,0,Concrete,Muddy,None,Lit,DUMMY test record (Mymensingh)
+2026-04-10 07:53,22.783438,89.405015,Property,Side swipe,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Khulna)
+2026-04-10 09:07,24.777705,90.395110,Fatal,Hit object off road,Human error,1,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-04-10 14:13,22.618549,91.659072,Injury,Hit pedestrian,Human error,1,0,1,2,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-10 19:01,23.776771,90.333922,Property,Right angle,Human error,3,0,0,0,Concrete,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-04-11 11:07,23.703256,90.519849,Injury,Rear end,Vehicle defect,2,1,0,0,Asphalt,Dry,Police controlled,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-04-11 12:44,23.682163,90.502591,Injury,Rear end,Human error,3,0,2,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-04-11 13:45,23.698435,90.448171,Property,Head on,Road defect,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-11 18:55,22.844182,89.210851,Fatal,Hit pedestrian,Vehicle defect,1,0,2,2,Asphalt,Dry,Centerline,Lit,DUMMY test record (Khulna)
+2026-04-12 07:32,24.795896,91.870144,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Sylhet)
+2026-04-12 13:56,23.706385,90.281091,Injury,Rear end,Human error,2,1,2,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-04-12 17:20,25.873585,89.341490,Injury,Hit pedestrian,Human error,1,1,0,1,Earth,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-04-12 21:38,22.767816,89.320433,Injury,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Khulna)
+2026-04-13 06:00,23.706538,90.519830,Injury,Side swipe,Human error,2,1,2,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-04-13 07:00,23.710235,90.434874,Fatal,Hit pedestrian,Vehicle defect,1,1,3,2,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-04-13 08:47,23.959650,90.499875,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-04-13 21:51,24.921716,91.930435,Injury,Hit animal,Human error,1,1,0,0,Asphalt,Dry,Pedestrian crossing,Unlit,DUMMY test record (Sylhet)
+2026-04-14 11:54,24.359832,88.731823,Injury,Head on,Human error,2,1,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-04-14 14:37,24.351968,88.646524,Property,Side swipe,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-04-14 19:33,23.796611,90.354387,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Police controlled,Unlit,DUMMY test record (Dhaka)
+2026-04-15 10:43,23.677843,90.529411,Injury,Hit object in road,Human error,1,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-16 02:39,22.600062,90.296324,Injury,Overturned vehicle,Road defect,1,0,2,0,Concrete,Dry,Traffic lights,Unlit,DUMMY test record (Barishal)
+2026-04-16 08:38,24.386252,88.633755,Property,Rear end,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-04-16 17:04,22.395478,91.848035,Injury,Hit parked vehicle,Human error,3,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-04-16 17:05,22.886360,89.195115,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Khulna)
+2026-04-16 17:59,23.833933,90.420445,Property,Side swipe,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-04-16 18:43,24.471414,88.603789,Injury,Side swipe,Road defect,3,1,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-04-16 21:09,24.357834,88.701994,Injury,Head on,Human error,2,1,1,0,Asphalt,Dry,Police controlled,Unlit,DUMMY test record (Rajshahi)
+2026-04-17 06:04,23.827723,90.331416,Property,Hit pedestrian,Vehicle defect,1,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-17 10:48,23.644570,90.405042,Fatal,Side swipe,Human error,2,2,3,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-04-17 11:04,24.633904,90.335478,Fatal,Hit pedestrian,Human error,1,2,3,1,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-04-17 12:07,25.683825,89.336902,Fatal,Head on,Human error,2,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-04-17 12:14,23.769357,90.572894,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-04-17 16:21,23.010767,91.378916,Injury,Hit animal,Human error,1,1,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-18 12:48,24.321117,88.632923,Fatal,Head on,Human error,3,2,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-04-19 00:43,23.880387,90.495627,Injury,Hit pedestrian,Human error,1,0,2,2,Asphalt,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-04-19 09:03,23.759573,90.413413,Injury,Hit pedestrian,Human error,1,1,2,1,Earth,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-19 19:24,24.395170,88.548454,Injury,Rear end,Human error,2,1,2,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-04-19 20:50,23.745298,90.419543,Property,Hit animal,Vehicle defect,1,0,0,0,Concrete,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-04-20 06:15,23.763310,90.534112,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-04-20 09:30,22.768729,90.474152,Injury,Hit parked vehicle,Human error,2,1,1,0,Earth,Dry,None,Lit,DUMMY test record (Barishal)
+2026-04-20 14:02,23.010721,91.380709,Property,Side swipe,Human error,2,0,0,0,Earth,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-20 15:02,23.681712,90.330256,Injury,Hit object off road,Human error,1,0,2,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-04-20 15:11,23.740956,90.522606,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-04-20 15:50,23.788354,90.484954,Injury,Side swipe,Human error,3,1,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-04-20 16:10,24.249698,88.676190,Property,Hit object off road,Human error,1,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-04-22 09:15,23.007504,91.382358,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Wet,Centerline,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-22 11:19,23.785216,90.344695,Fatal,Rear end,Human error,2,2,2,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-04-22 15:04,24.772847,90.345888,Injury,Rear end,Vehicle defect,2,1,2,0,Earth,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-04-22 19:43,22.717037,89.402541,Property,Side swipe,Human error,2,0,0,0,Concrete,Muddy,None,Lit,DUMMY test record (Khulna)
+2026-04-24 00:37,22.622026,91.662658,Injury,Overturned vehicle,Human error,1,1,0,0,Asphalt,Dry,None,Unlit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-24 07:07,24.929420,91.953272,Injury,Hit animal,Human error,1,0,1,0,Concrete,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-04-24 07:55,23.783970,90.345028,Injury,Hit object in road,Human error,1,0,2,0,Concrete,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-04-24 11:01,23.009501,91.383414,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-24 18:03,23.824029,90.456458,Injury,Side swipe,Human error,3,1,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-24 18:30,22.254246,91.876518,Injury,Head on,Vehicle defect,2,1,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Chattogram)
+2026-04-25 00:28,23.540818,90.214793,Injury,Rear end,Human error,3,1,0,0,Asphalt,Dry,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-04-25 08:47,22.360690,91.799023,Property,Head on,Vehicle defect,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-04-25 10:35,23.010266,91.381342,Fatal,Rear end,Human error,2,1,4,0,Concrete,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-25 13:25,23.732958,90.378212,Injury,Head on,Human error,3,0,2,0,Concrete,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-04-26 05:16,23.828302,90.428882,Injury,Side swipe,Human error,2,1,2,0,Asphalt,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-04-26 08:47,22.818726,89.382653,Property,Rear end,Human error,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-04-26 20:57,23.012065,91.379348,Property,Rear end,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-27 17:00,24.366910,88.677388,Property,Overturned vehicle,Road defect,1,0,0,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-04-27 17:21,23.778980,90.357299,Injury,Overturned vehicle,Human error,1,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-27 17:26,24.749973,90.386175,Fatal,Side swipe,Human error,2,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-04-27 19:12,23.754479,90.373717,Property,Rear end,Human error,3,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-04-27 20:23,22.780657,89.341065,Property,Rear end,Human error,2,0,0,0,Earth,Dry,None,Unlit,DUMMY test record (Khulna)
+2026-04-28 04:03,23.692710,90.352704,Injury,Head on,Human error,2,1,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-04-28 12:03,22.620269,91.660090,Injury,Overturned vehicle,Human error,1,0,1,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-29 08:07,22.142622,91.736330,Injury,Head on,Human error,2,1,0,0,Gravel,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-04-29 08:47,23.703622,90.518086,Property,Rear end,Vehicle defect,2,0,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-04-29 09:40,22.619021,91.658379,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-29 14:34,22.618608,91.659355,Injury,Rear end,Human error,2,0,2,0,Concrete,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-29 19:39,23.010999,91.379957,Injury,Head on,Human error,3,1,2,0,Asphalt,Dry,Police controlled,Unlit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-04-30 00:06,23.712957,90.509569,Property,Head on,Human error,2,0,0,0,Earth,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-04-30 03:41,22.949562,89.457094,Property,Head on,Human error,2,0,0,0,Gravel,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-04-30 06:35,23.794178,90.409825,Injury,Hit parked vehicle,Human error,2,1,1,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-04-30 07:37,22.621372,91.661338,Property,Side swipe,Road defect,2,0,0,0,Earth,Wet,Traffic lights,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-04-30 13:06,23.820094,90.354846,Injury,Overturned vehicle,Human error,1,0,2,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-04-30 13:18,23.706536,90.520038,Property,Hit object off road,Human error,1,0,0,0,Concrete,Dry,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-04-30 13:34,22.400737,91.802816,Fatal,Hit pedestrian,Human error,1,2,1,1,Asphalt,Dry,Centerline,Lit,DUMMY test record (Chattogram)
+2026-05-01 15:22,22.325867,91.734356,Property,Head on,Human error,2,0,0,0,Gravel,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-01 16:21,22.408275,91.828814,Property,Head on,Vehicle defect,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-01 18:45,23.792074,90.447044,Injury,Rear end,Vehicle defect,2,0,1,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-05-01 22:27,22.618977,91.661175,Injury,Hit pedestrian,Human error,1,0,2,1,Asphalt,Dry,Give way,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-02 14:17,23.729712,90.449168,Injury,Hit object off road,Human error,1,1,2,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-05-02 15:01,23.704439,90.520150,Injury,Hit pedestrian,Vehicle defect,1,1,2,2,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-05-02 15:31,25.013648,91.903883,Injury,Hit object off road,Human error,1,1,1,0,Gravel,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-05-02 18:29,25.680441,89.356722,Injury,Head on,Human error,3,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-05-03 09:04,22.619432,91.661272,Property,Hit parked vehicle,Vehicle defect,2,0,0,0,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-03 13:24,23.597209,90.255384,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-03 15:53,22.717925,90.260327,Property,Head on,Human error,3,0,0,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Barishal)
+2026-05-03 16:16,23.711896,90.435832,Property,Overturned vehicle,Road defect,1,0,0,0,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-04 09:19,22.270659,91.971410,Injury,Side swipe,Human error,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-04 15:07,22.351814,91.871365,Injury,Rear end,Human error,3,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-05 16:58,24.670805,90.438553,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-05-05 22:15,23.930277,90.549694,Property,Side swipe,Vehicle defect,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-05-06 18:36,22.618214,91.663358,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Muddy,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-06 21:50,23.008160,91.379570,Injury,Head on,Human error,2,1,1,0,Asphalt,Dry,None,Unlit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-05-07 08:56,22.653398,90.217610,Injury,Hit object in road,Human error,1,1,2,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Barishal)
+2026-05-07 18:25,23.641941,90.351416,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-05-08 08:58,23.709463,90.439686,Fatal,Hit pedestrian,Vehicle defect,1,0,0,1,Earth,Dry,Police controlled,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-08 10:37,23.690607,90.444848,Property,Overturned vehicle,Human error,1,0,0,0,Gravel,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-08 16:29,23.009912,91.383108,Injury,Rear end,Vehicle defect,2,0,2,0,Earth,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-05-08 23:21,25.727577,89.215593,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Rangpur)
+2026-05-09 07:29,23.834508,90.260089,Property,Hit pedestrian,Human error,1,0,0,0,Gravel,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-09 10:06,22.340692,91.919179,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-09 13:01,23.759156,90.513415,Injury,Right angle,Vehicle defect,2,0,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-09 16:58,24.701320,90.386823,Injury,Side swipe,Human error,3,0,1,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Mymensingh)
+2026-05-09 18:55,22.621937,91.660951,Injury,Hit pedestrian,Human error,1,0,1,2,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-09 19:29,23.847799,90.495858,Injury,Side swipe,Human error,2,0,2,0,Gravel,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-10 04:20,22.388131,91.805208,Injury,Right angle,Vehicle defect,2,0,2,0,Asphalt,Dry,Pedestrian crossing,Unlit,DUMMY test record (Chattogram)
+2026-05-10 06:30,22.774271,89.381185,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Khulna)
+2026-05-10 11:10,23.782787,90.344923,Injury,Hit pedestrian,Vehicle defect,1,1,0,2,Concrete,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-10 15:39,22.721790,90.277306,Injury,Side swipe,Human error,2,1,0,0,Concrete,Muddy,Police controlled,Lit,DUMMY test record (Barishal)
+2026-05-11 11:11,23.711704,90.436585,Injury,Rear end,Human error,3,1,2,0,Gravel,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-11 15:18,23.799046,90.346049,Injury,Overturned vehicle,Human error,1,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-11 18:56,23.757247,90.514290,Property,Right angle,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-12 03:40,25.701528,89.231109,Injury,Rear end,Road defect,2,0,2,0,Concrete,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-05-12 08:09,23.839870,90.428023,Injury,Right angle,Road defect,2,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-12 08:26,23.772440,90.379835,Fatal,Head on,Human error,2,2,1,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-05-12 18:51,23.784146,90.345798,Injury,Side swipe,Human error,2,1,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-13 07:18,23.770626,90.282499,Injury,Head on,Road defect,2,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-14 06:06,24.361830,88.662179,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-05-16 00:39,23.794455,90.425657,Property,Rear end,Human error,2,0,0,0,Concrete,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-05-16 14:59,23.774709,90.456151,Property,Side swipe,Human error,2,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-16 18:29,23.705641,90.517801,Injury,Head on,Human error,2,1,1,0,Earth,Dry,Police controlled,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-05-17 14:02,23.784574,90.346282,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-17 18:15,23.708693,90.403948,Fatal,Hit pedestrian,Human error,1,1,2,2,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-17 19:54,23.643372,90.427340,Injury,Hit object off road,Road defect,1,0,1,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-05-18 09:08,22.414627,91.680614,Property,Head on,Human error,2,0,0,0,Concrete,Dry,Centerline,Lit,DUMMY test record (Chattogram)
+2026-05-18 09:27,22.327821,91.781429,Injury,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,Give way,Lit,DUMMY test record (Chattogram)
+2026-05-18 13:21,23.879590,90.350283,Injury,Rear end,Human error,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-18 15:48,23.826615,90.412551,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-05-18 18:03,24.434441,88.679327,Property,Rear end,Human error,3,0,0,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-05-19 06:04,22.369900,91.729795,Fatal,Hit object off road,Human error,1,0,1,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Chattogram)
+2026-05-19 08:16,23.702615,90.521917,Fatal,Head on,Human error,2,2,3,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-05-19 14:17,22.434759,91.629759,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Chattogram)
+2026-05-19 23:29,23.780495,90.342831,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-20 07:55,22.659849,90.342604,Injury,Hit pedestrian,Human error,1,0,0,1,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Barishal)
+2026-05-20 11:10,23.662493,90.377564,Injury,Side swipe,Human error,3,1,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-05-20 21:44,23.784088,90.345175,Property,Right angle,Human error,2,0,0,0,Asphalt,Muddy,None,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-20 22:29,24.780469,90.424399,Injury,Side swipe,Road defect,2,1,1,0,Asphalt,Dry,None,Unlit,DUMMY test record (Mymensingh)
+2026-05-21 02:17,22.467859,91.709792,Injury,Rear end,Human error,2,0,2,0,Concrete,Dry,Traffic lights,Unlit,DUMMY test record (Chattogram)
+2026-05-21 19:28,24.866549,91.882262,Property,Overturned vehicle,Road defect,1,0,0,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Sylhet)
+2026-05-21 20:56,23.710141,90.433703,Fatal,Hit object in road,Human error,1,2,3,0,Asphalt,Dry,Centerline,Unlit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-22 08:30,23.850791,90.270139,Injury,Hit object off road,Human error,1,1,1,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-22 14:19,23.740660,90.526792,Injury,Right angle,Human error,2,1,1,0,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-05-22 19:07,23.707058,90.520535,Injury,Side swipe,Human error,2,1,0,0,Asphalt,Dry,Pedestrian crossing,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-05-23 08:31,22.620900,91.662736,Injury,Hit pedestrian,Vehicle defect,1,1,1,2,Concrete,Muddy,Traffic lights,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-23 14:32,25.603055,89.157370,Injury,Right angle,Human error,2,1,2,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Rangpur)
+2026-05-23 17:52,22.772351,90.329719,Injury,Side swipe,Human error,2,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-05-23 19:00,23.711468,90.437041,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-24 00:12,24.696657,90.531598,Property,Head on,Human error,2,0,0,0,Earth,Dry,None,Unlit,DUMMY test record (Mymensingh)
+2026-05-24 06:24,23.784647,90.427111,Fatal,Right angle,Human error,2,2,4,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-05-24 08:20,24.879431,91.811454,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-05-24 13:31,24.796721,90.369046,Injury,Right angle,Human error,3,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Mymensingh)
+2026-05-24 14:27,23.699050,90.442056,Injury,Head on,Human error,2,1,1,0,Concrete,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-25 08:04,23.798458,90.286303,Injury,Hit parked vehicle,Human error,2,0,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-25 08:10,23.637992,90.409498,Injury,Hit pedestrian,Human error,1,0,1,2,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-25 14:08,23.709045,90.434715,Injury,Side swipe,Road defect,2,0,2,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-05-25 18:35,22.430316,91.821778,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,Give way,Lit,DUMMY test record (Chattogram)
+2026-05-25 18:57,22.618101,91.657292,Injury,Right angle,Human error,2,1,0,0,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-05-25 19:31,25.780377,89.298523,Fatal,Overturned vehicle,Vehicle defect,1,1,1,0,Asphalt,Dry,None,Unlit,DUMMY test record (Rangpur)
+2026-05-26 19:21,23.843229,90.378310,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-05-27 10:06,22.316416,91.923275,Injury,Rear end,Road defect,3,0,1,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Chattogram)
+2026-05-27 10:31,24.809608,90.476627,Injury,Hit pedestrian,Vehicle defect,1,0,1,2,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Mymensingh)
+2026-05-27 10:35,23.652081,90.405562,Fatal,Head on,Human error,2,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-27 10:41,25.750471,89.316033,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Wet,Centerline,Lit,DUMMY test record (Rangpur)
+2026-05-27 11:45,24.675360,90.487552,Injury,Hit pedestrian,Human error,1,1,1,1,Earth,Dry,Police controlled,Lit,DUMMY test record (Mymensingh)
+2026-05-27 13:11,22.317239,91.599741,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-27 17:05,23.629849,90.422741,Injury,Head on,Human error,2,1,0,0,Gravel,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-05-28 18:40,23.793545,90.449868,Fatal,Overturned vehicle,Vehicle defect,1,0,4,0,Earth,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-05-29 09:55,22.379106,91.927734,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-05-29 10:24,25.763380,89.446232,Fatal,Right angle,Human error,2,0,4,0,Earth,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-05-29 15:50,22.852630,89.269542,Fatal,Rear end,Vehicle defect,2,0,4,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-05-29 16:27,23.664707,90.402296,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-05-29 21:02,22.814354,89.286105,Injury,Right angle,Human error,2,1,2,0,Asphalt,Dry,None,Unlit,DUMMY test record (Khulna)
+2026-05-30 13:28,25.742960,89.266504,Injury,Side swipe,Human error,3,0,2,0,Concrete,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-05-30 18:08,23.782013,90.344377,Fatal,Rear end,Road defect,2,0,2,0,Concrete,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-05-30 18:21,24.789265,90.450601,Injury,Hit pedestrian,Human error,1,1,0,1,Earth,Muddy,Police controlled,Lit,DUMMY test record (Mymensingh)
+2026-05-30 19:46,22.372907,91.780129,Property,Head on,Human error,2,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Chattogram)
+2026-05-31 05:50,23.670393,90.263988,Injury,Hit pedestrian,Vehicle defect,1,0,2,1,Asphalt,Wet,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-05-31 20:22,25.789413,89.275667,Injury,Head on,Human error,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-06-01 11:35,25.803394,89.188232,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-06-01 12:52,23.780901,90.347105,Property,Rear end,Vehicle defect,2,0,0,0,Asphalt,Wet,Police controlled,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-01 14:26,24.455881,88.539436,Fatal,Overturned vehicle,Vehicle defect,1,2,1,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Rajshahi)
+2026-06-01 20:42,24.443954,88.511416,Property,Head on,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-06-01 21:19,25.661167,89.378883,Injury,Head on,Human error,2,1,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-06-02 12:54,23.704379,90.337762,Property,Hit pedestrian,Road defect,1,0,0,0,Concrete,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-06-02 15:43,23.722910,90.301978,Fatal,Hit pedestrian,Human error,1,0,3,1,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-03 12:09,22.405283,91.785596,Property,Head on,Human error,2,0,0,0,Earth,Wet,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-06-03 13:05,23.732288,90.417578,Injury,Hit pedestrian,Human error,1,0,1,2,Earth,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-03 16:13,22.411174,91.610963,Injury,Hit pedestrian,Human error,1,0,2,1,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-06-03 17:46,24.762670,90.441429,Fatal,Hit pedestrian,Vehicle defect,1,1,0,3,Asphalt,Flooded,None,Lit,DUMMY test record (Mymensingh)
+2026-06-03 19:09,23.760812,90.394506,Injury,Hit pedestrian,Human error,1,0,1,2,Concrete,Muddy,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-04 03:37,23.780188,90.342189,Injury,Rear end,Human error,3,0,1,0,Concrete,Wet,None,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-04 08:09,24.383854,88.598739,Injury,Head on,Human error,2,1,1,0,Concrete,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-06-04 08:31,24.900068,91.897775,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-06-04 10:35,22.485268,91.861756,Fatal,Head on,Human error,2,1,2,0,Asphalt,Flooded,None,Lit,DUMMY test record (Chattogram)
+2026-06-04 12:50,24.039257,90.391046,Property,Side swipe,Human error,3,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-06-04 12:57,24.802309,91.776948,Injury,Head on,Road defect,2,0,2,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Sylhet)
+2026-06-04 18:13,23.782962,90.345005,Injury,Hit pedestrian,Human error,1,1,1,2,Asphalt,Dry,Give way,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-04 19:07,23.783329,90.348019,Injury,Rear end,Road defect,2,1,1,0,Earth,Wet,None,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-04 19:12,25.749885,89.284326,Injury,Hit pedestrian,Human error,1,0,2,1,Asphalt,Wet,None,Unlit,DUMMY test record (Rangpur)
+2026-06-05 15:41,24.749551,90.470992,Injury,Rear end,Human error,3,1,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Mymensingh)
+2026-06-06 05:31,25.816407,89.297504,Property,Head on,Human error,3,0,0,0,Earth,Wet,Traffic lights,Lit,DUMMY test record (Rangpur)
+2026-06-06 09:53,24.349813,88.593654,Fatal,Hit parked vehicle,Human error,2,1,2,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Rajshahi)
+2026-06-06 22:20,23.800352,90.425991,Injury,Hit object off road,Human error,1,1,2,0,Asphalt,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-06-07 05:53,23.690075,90.300540,Fatal,Hit object in road,Road defect,1,1,0,0,Asphalt,Dry,Pedestrian crossing,Unlit,DUMMY test record (Dhaka)
+2026-06-07 09:55,23.844735,90.548395,Injury,Rear end,Human error,2,0,1,0,Asphalt,Wet,Centerline,Lit,DUMMY test record (Dhaka)
+2026-06-07 11:51,23.721063,90.519224,Property,Head on,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-07 13:39,22.415542,91.792455,Injury,Side swipe,Human error,2,1,2,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-06-07 21:49,23.891930,90.329084,Property,Rear end,Human error,3,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-06-08 06:18,22.618395,91.658259,Injury,Hit object in road,Vehicle defect,1,1,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-06-08 20:32,23.784982,90.343314,Injury,Side swipe,Human error,2,0,2,0,Asphalt,Wet,Centerline,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-09 07:18,23.649646,90.470552,Property,Rear end,Human error,2,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-10 22:42,23.850978,90.452234,Injury,Right angle,Human error,2,1,1,0,Asphalt,Wet,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-06-11 08:07,24.312238,88.530556,Injury,Overturned vehicle,Human error,1,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-06-12 04:42,22.392882,91.938036,Injury,Side swipe,Human error,3,0,2,0,Earth,Dry,Pedestrian crossing,Unlit,DUMMY test record (Chattogram)
+2026-06-12 17:57,23.659147,90.423632,Property,Side swipe,Road defect,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-12 21:27,23.008900,91.378527,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,Centerline,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-06-13 05:52,23.913731,90.132505,Fatal,Head on,Human error,2,2,4,0,Concrete,Muddy,Police controlled,Unlit,DUMMY test record (Dhaka)
+2026-06-13 06:54,23.848959,90.526854,Injury,Side swipe,Human error,2,0,1,0,Concrete,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-06-13 08:50,22.440696,91.847472,Injury,Hit pedestrian,Human error,1,1,2,2,Earth,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-06-14 06:43,23.837807,90.380571,Property,Overturned vehicle,Vehicle defect,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-14 07:13,22.383896,91.800968,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-06-14 17:50,23.695412,90.467930,Property,Hit object in road,Human error,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-15 09:23,23.729792,90.398551,Injury,Hit pedestrian,Human error,1,0,2,2,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-06-16 07:34,22.616382,91.660031,Injury,Rear end,Human error,2,1,0,0,Concrete,Wet,Traffic lights,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-06-16 12:15,23.744694,90.353803,Property,Right angle,Human error,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-16 13:22,22.745414,90.350428,Injury,Head on,Human error,2,1,1,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Barishal)
+2026-06-17 09:30,22.711372,90.373478,Injury,Hit pedestrian,Road defect,1,1,1,2,Asphalt,Wet,None,Lit,DUMMY test record (Barishal)
+2026-06-17 22:53,24.395989,88.762992,Injury,Overturned vehicle,Human error,1,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-06-18 08:11,23.843974,90.461843,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-18 14:13,23.711542,90.435171,Property,Head on,Human error,2,0,0,0,Earth,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-06-18 15:53,24.416497,88.565306,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-06-18 17:15,23.724038,90.429409,Injury,Hit pedestrian,Human error,1,1,1,1,Gravel,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-06-18 20:08,24.776480,90.348545,Injury,Right angle,Human error,2,0,1,0,Earth,Dry,Traffic lights,Unlit,DUMMY test record (Mymensingh)
+2026-06-19 07:23,22.361495,91.802932,Property,Hit animal,Human error,1,0,0,0,Earth,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-06-19 18:02,24.760741,90.497381,Injury,Head on,Human error,2,1,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Mymensingh)
+2026-06-20 06:10,23.796100,90.359343,Property,Side swipe,Human error,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-20 07:51,22.498028,91.724962,Property,Rear end,Human error,3,0,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-06-20 09:23,23.703664,90.521916,Injury,Side swipe,Human error,3,0,1,0,Asphalt,Wet,Pedestrian crossing,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-06-20 11:54,23.818753,90.212739,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-20 14:05,22.312958,91.696400,Property,Hit parked vehicle,Human error,2,0,0,0,Asphalt,Flooded,None,Lit,DUMMY test record (Chattogram)
+2026-06-20 16:52,22.427320,91.735106,Injury,Rear end,Human error,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-06-20 21:50,22.506985,91.812208,Injury,Hit pedestrian,Human error,1,0,0,2,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-06-21 00:08,23.731053,90.467327,Injury,Hit pedestrian,Human error,1,0,1,2,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-06-21 17:02,23.856807,90.406866,Injury,Head on,Human error,2,1,0,0,Earth,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-06-21 22:39,23.778964,90.410023,Injury,Right angle,Human error,2,1,0,0,Asphalt,Dry,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-06-22 05:35,25.739657,89.210339,Injury,Head on,Road defect,2,1,1,0,Gravel,Dry,Traffic lights,Lit,DUMMY test record (Rangpur)
+2026-06-22 06:35,23.010676,91.380663,Fatal,Head on,Road defect,2,2,4,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-06-23 18:29,23.803782,90.322069,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-06-23 19:01,24.401420,88.587378,Fatal,Hit pedestrian,Road defect,1,0,1,1,Asphalt,Wet,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-06-23 21:16,24.465659,88.513878,Property,Rear end,Human error,3,0,0,0,Concrete,Dry,Police controlled,Unlit,DUMMY test record (Rajshahi)
+2026-06-24 05:02,24.345547,88.569815,Injury,Rear end,Vehicle defect,2,0,1,0,Asphalt,Dry,None,Unlit,DUMMY test record (Rajshahi)
+2026-06-24 09:44,23.703237,90.519490,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Wet,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-06-24 23:07,22.663820,90.413056,Injury,Right angle,Human error,2,1,1,0,Gravel,Wet,Police controlled,Unlit,DUMMY test record (Barishal)
+2026-06-25 02:35,23.825278,90.390376,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-06-25 08:28,22.366789,91.856546,Property,Rear end,Road defect,2,0,0,0,Concrete,Flooded,Pedestrian crossing,Lit,DUMMY test record (Chattogram)
+2026-06-25 13:06,23.835056,90.443784,Property,Overturned vehicle,Human error,1,0,0,0,Gravel,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-06-25 15:53,24.822906,90.330338,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Mymensingh)
+2026-06-25 16:14,23.825189,90.318176,Injury,Hit pedestrian,Vehicle defect,1,0,2,1,Asphalt,Muddy,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-06-25 18:43,23.786243,90.342591,Injury,Right angle,Human error,2,1,1,0,Concrete,Flooded,Police controlled,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-25 20:05,22.761665,89.400330,Injury,Side swipe,Vehicle defect,2,1,2,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Khulna)
+2026-06-25 21:43,22.914041,89.289249,Property,Hit pedestrian,Road defect,1,0,0,0,Concrete,Wet,None,Lit,DUMMY test record (Khulna)
+2026-06-26 10:12,22.931197,89.345213,Property,Side swipe,Road defect,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-06-26 11:01,25.812785,89.309058,Injury,Rear end,Human error,2,1,0,0,Concrete,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-06-27 11:00,25.772376,89.251269,Injury,Rear end,Road defect,3,1,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Rangpur)
+2026-06-27 22:24,23.731066,90.515207,Fatal,Rear end,Human error,2,1,2,0,Asphalt,Wet,Give way,Unlit,DUMMY test record (Dhaka)
+2026-06-27 23:40,23.767578,90.346277,Injury,Right angle,Road defect,2,0,2,0,Asphalt,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-06-28 05:39,22.313115,91.899603,Property,Overturned vehicle,Road defect,1,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Chattogram)
+2026-06-28 08:43,22.357645,91.814491,Property,Head on,Human error,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-06-28 09:24,23.737898,90.390852,Injury,Hit parked vehicle,Road defect,2,0,2,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-28 14:23,23.781965,90.345307,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Flooded,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-06-28 17:02,23.567311,90.355457,Property,Rear end,Road defect,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-06-28 18:08,25.817100,89.206441,Fatal,Side swipe,Human error,3,0,3,0,Asphalt,Wet,None,Lit,DUMMY test record (Rangpur)
+2026-06-29 13:30,22.299075,91.688377,Property,Overturned vehicle,Human error,1,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-06-29 16:07,23.776950,90.417123,Property,Rear end,Human error,2,0,0,0,Asphalt,Muddy,None,Lit,DUMMY test record (Dhaka)
+2026-06-29 22:29,24.821315,91.885832,Fatal,Overturned vehicle,Human error,1,1,0,0,Asphalt,Flooded,None,Unlit,DUMMY test record (Sylhet)
+2026-06-30 03:45,22.414844,91.723310,Injury,Side swipe,Vehicle defect,2,0,2,0,Concrete,Wet,None,Unlit,DUMMY test record (Chattogram)
+2026-06-30 12:17,23.009109,91.379776,Injury,Rear end,Human error,2,1,1,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-06-30 19:30,24.560327,88.638898,Injury,Hit pedestrian,Road defect,1,1,0,1,Concrete,Dry,None,Unlit,DUMMY test record (Rajshahi)
+2026-07-01 11:04,23.841713,90.386895,Injury,Hit pedestrian,Human error,1,1,2,1,Earth,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-07-01 19:17,23.707116,90.432857,Injury,Hit pedestrian,Human error,1,1,0,2,Gravel,Dry,None,Unlit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-07-02 08:56,23.656687,90.446050,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-07-02 18:43,23.788212,90.442037,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-07-02 23:21,24.961758,91.931700,Injury,Rear end,Human error,2,1,2,0,Asphalt,Wet,Traffic lights,Unlit,DUMMY test record (Sylhet)
+2026-07-03 05:52,23.891460,90.384821,Injury,Overturned vehicle,Human error,1,1,1,0,Concrete,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-07-04 18:45,24.933413,91.873430,Property,Hit parked vehicle,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-07-04 18:56,23.690404,90.393570,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,Centerline,Lit,DUMMY test record (Dhaka)
+2026-07-04 19:30,23.728729,90.340751,Injury,Side swipe,Human error,2,1,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Dhaka)
+2026-07-05 07:57,23.711777,90.434416,Property,Right angle,Human error,2,0,0,0,Gravel,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-07-05 08:24,22.618702,91.658706,Injury,Rear end,Human error,2,1,1,0,Asphalt,Wet,Police controlled,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-07-05 12:12,23.008455,91.379141,Injury,Head on,Human error,2,1,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-07-05 20:05,23.703373,90.516954,Property,Right angle,Human error,2,0,0,0,Asphalt,Wet,None,Unlit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-07-06 06:39,23.866829,90.242283,Injury,Right angle,Human error,2,1,0,0,Asphalt,Muddy,None,Lit,DUMMY test record (Dhaka)
+2026-07-06 09:39,24.390843,88.623494,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-07-06 13:02,22.474066,91.716601,Injury,Hit pedestrian,Vehicle defect,1,0,1,2,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-07-06 15:16,24.740872,90.431546,Injury,Rear end,Human error,3,1,2,0,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Mymensingh)
+2026-07-06 16:07,25.757285,89.141978,Injury,Rear end,Human error,2,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-07-06 19:35,23.812560,90.379390,Injury,Right angle,Human error,2,1,1,0,Asphalt,Wet,Police controlled,Unlit,DUMMY test record (Dhaka)
+2026-07-07 11:12,22.767766,89.367729,Property,Hit parked vehicle,Human error,3,0,0,0,Asphalt,Wet,Give way,Lit,DUMMY test record (Khulna)
+2026-07-07 17:25,22.620120,91.662380,Injury,Overturned vehicle,Human error,1,1,1,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-07-07 19:53,23.011110,91.381250,Injury,Hit object off road,Human error,1,1,0,0,Concrete,Dry,Traffic lights,Unlit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-07-08 07:33,23.804076,90.358448,Injury,Side swipe,Human error,2,0,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-08 10:19,25.754997,89.244608,Injury,Hit object off road,Human error,1,1,1,0,Concrete,Wet,None,Lit,DUMMY test record (Rangpur)
+2026-07-08 10:19,23.743763,90.325597,Injury,Hit parked vehicle,Human error,2,0,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-08 19:30,22.730662,89.370959,Injury,Hit pedestrian,Vehicle defect,1,0,2,1,Asphalt,Wet,None,Unlit,DUMMY test record (Khulna)
+2026-07-09 06:29,24.416860,88.418399,Injury,Hit pedestrian,Human error,1,1,1,1,Earth,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-07-09 07:29,24.763402,90.426595,Injury,Hit object off road,Human error,1,0,1,0,Gravel,Dry,Police controlled,Lit,DUMMY test record (Mymensingh)
+2026-07-09 13:24,23.816796,90.349010,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-07-09 15:25,24.727215,90.300156,Property,Rear end,Vehicle defect,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-07-09 19:16,23.753482,90.366429,Property,Rear end,Human error,2,0,0,0,Concrete,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-10 10:23,24.731878,90.341320,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-07-11 10:47,23.806664,90.432839,Injury,Hit pedestrian,Human error,1,1,2,1,Asphalt,Flooded,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-07-11 13:42,22.324913,91.803857,Property,Right angle,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Chattogram)
+2026-07-11 16:45,23.732207,90.439472,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-07-12 09:02,22.444535,91.767216,Injury,Rear end,Human error,3,1,2,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-07-12 17:23,23.830929,90.241253,Injury,Head on,Human error,3,1,0,0,Concrete,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-13 11:37,23.782006,90.345180,Injury,Right angle,Road defect,2,1,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-07-13 12:32,25.778207,89.285541,Injury,Hit pedestrian,Human error,1,0,2,1,Asphalt,Wet,Pedestrian crossing,Lit,DUMMY test record (Rangpur)
+2026-07-14 10:11,22.887141,89.484568,Injury,Head on,Human error,3,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Khulna)
+2026-07-15 00:39,22.142066,91.875838,Property,Hit parked vehicle,Human error,2,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Chattogram)
+2026-07-15 10:12,22.197510,91.889597,Property,Head on,Human error,2,0,0,0,Asphalt,Muddy,None,Lit,DUMMY test record (Chattogram)
+2026-07-15 19:01,24.360147,88.617572,Property,Right angle,Human error,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Rajshahi)
+2026-07-15 20:25,22.329315,91.756578,Injury,Rear end,Road defect,2,0,1,0,Asphalt,Wet,Centerline,Unlit,DUMMY test record (Chattogram)
+2026-07-15 21:11,22.895779,89.290860,Injury,Side swipe,Human error,3,1,1,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-07-15 21:58,24.314167,88.735664,Property,Hit pedestrian,Road defect,1,0,0,0,Gravel,Dry,None,Unlit,DUMMY test record (Rajshahi)
+2026-07-16 06:49,22.289405,91.801518,Injury,Right angle,Human error,2,1,0,0,Concrete,Wet,Centerline,Lit,DUMMY test record (Chattogram)
+2026-07-16 10:21,22.620081,91.659343,Property,Side swipe,Human error,2,0,0,0,Concrete,Wet,Traffic lights,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-07-16 13:31,23.704509,90.520874,Injury,Rear end,Human error,2,1,2,0,Concrete,Wet,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-07-17 06:44,23.012754,91.380388,Injury,Hit pedestrian,Human error,1,1,0,2,Concrete,Dry,Give way,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-07-17 08:07,24.941621,91.840320,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-07-17 11:21,23.891483,90.418264,Injury,Side swipe,Human error,3,1,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-07-17 11:28,23.719009,90.464707,Fatal,Head on,Road defect,2,1,4,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-07-17 11:30,23.785122,90.345623,Injury,Head on,Vehicle defect,2,1,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-07-17 17:20,25.714470,89.181649,Injury,Hit pedestrian,Human error,1,0,1,2,Gravel,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-07-18 07:23,23.702384,90.341941,Property,Side swipe,Human error,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-07-18 08:56,22.880270,89.270783,Injury,Hit parked vehicle,Human error,2,0,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Khulna)
+2026-07-18 10:02,22.404231,91.837817,Injury,Head on,Human error,2,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-07-18 11:26,22.368435,91.763641,Fatal,Hit pedestrian,Human error,1,1,1,1,Asphalt,Dry,Give way,Lit,DUMMY test record (Chattogram)
+2026-07-18 12:38,24.367030,88.497364,Injury,Head on,Human error,2,1,2,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-07-19 19:49,24.931972,91.863776,Injury,Hit pedestrian,Human error,1,1,0,1,Concrete,Dry,Centerline,Lit,DUMMY test record (Sylhet)
+2026-07-20 11:05,22.430395,91.824459,Injury,Hit pedestrian,Human error,1,0,1,2,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-07-20 18:06,24.994525,91.921185,Injury,Hit object in road,Human error,1,1,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Sylhet)
+2026-07-20 21:59,24.332726,88.717909,Injury,Head on,Human error,2,1,0,0,Earth,Wet,None,Unlit,DUMMY test record (Rajshahi)
+2026-07-21 10:43,23.704469,90.519800,Injury,Side swipe,Human error,2,1,1,0,Asphalt,Wet,Traffic lights,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-07-21 19:44,23.710730,90.434223,Injury,Head on,Human error,2,0,2,0,Asphalt,Wet,Pedestrian crossing,Unlit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-07-21 20:11,22.808338,89.237231,Property,Right angle,Vehicle defect,3,0,0,0,Asphalt,Wet,Police controlled,Unlit,DUMMY test record (Khulna)
+2026-07-21 22:50,22.651527,90.429802,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Barishal)
+2026-07-22 10:43,22.300559,91.840955,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Chattogram)
+2026-07-23 07:19,23.693484,90.369628,Injury,Rear end,Human error,3,1,1,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-07-23 14:53,23.687193,90.415069,Injury,Overturned vehicle,Human error,1,1,0,0,Earth,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-07-23 17:30,23.765833,90.402569,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-23 19:20,23.807406,90.423234,Property,Hit pedestrian,Road defect,1,0,0,0,Concrete,Dry,Police controlled,Unlit,DUMMY test record (Dhaka)
+2026-07-25 05:44,23.827896,90.476752,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-07-25 06:37,23.795325,90.386505,Property,Head on,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-25 10:26,23.648406,90.318973,Property,Right angle,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-07-25 10:47,24.324362,88.496954,Property,Hit pedestrian,Vehicle defect,1,0,0,0,Gravel,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-07-25 10:58,22.891805,89.374202,Property,Side swipe,Human error,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Khulna)
+2026-07-26 18:11,24.400758,88.633491,Injury,Rear end,Human error,2,1,2,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-07-26 18:22,25.014229,91.889639,Property,Side swipe,Human error,3,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-07-26 18:36,23.758401,90.300399,Injury,Head on,Human error,2,0,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-26 20:02,23.801743,90.321042,Property,Right angle,Human error,2,0,0,0,Earth,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-07-27 12:30,24.894388,91.844231,Injury,Side swipe,Vehicle defect,2,1,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Sylhet)
+2026-07-27 17:36,23.706490,90.518898,Injury,Right angle,Road defect,2,0,1,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-07-28 12:47,23.822974,90.449318,Injury,Hit pedestrian,Vehicle defect,1,0,0,2,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-07-29 01:52,23.792138,90.302572,Property,Rear end,Vehicle defect,2,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-07-29 10:02,23.811890,90.552173,Property,Head on,Road defect,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-07-29 10:26,23.872171,90.505007,Injury,Hit pedestrian,Road defect,1,1,0,1,Asphalt,Wet,Centerline,Lit,DUMMY test record (Dhaka)
+2026-07-30 18:36,22.619671,91.660068,Injury,Rear end,Road defect,3,1,2,0,Gravel,Dry,Police controlled,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-07-30 20:06,24.331500,88.566663,Injury,Hit pedestrian,Human error,1,1,1,2,Concrete,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-01 04:09,22.383958,91.789336,Property,Rear end,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Chattogram)
+2026-08-01 10:20,25.701798,89.242693,Injury,Rear end,Human error,3,1,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Rangpur)
+2026-08-02 02:45,22.302808,91.868984,Injury,Hit object in road,Human error,1,1,0,0,Asphalt,Wet,Pedestrian crossing,Unlit,DUMMY test record (Chattogram)
+2026-08-02 06:05,23.865434,90.368938,Injury,Rear end,Human error,3,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-08-02 06:24,25.677316,89.230135,Injury,Rear end,Vehicle defect,3,1,0,0,Concrete,Wet,Police controlled,Lit,DUMMY test record (Rangpur)
+2026-08-02 10:22,22.281716,91.774428,Property,Head on,Road defect,3,0,0,0,Gravel,Wet,Pedestrian crossing,Lit,DUMMY test record (Chattogram)
+2026-08-02 21:17,24.763871,90.326114,Property,Rear end,Road defect,2,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Mymensingh)
+2026-08-02 22:47,22.236069,91.805134,Injury,Rear end,Road defect,2,1,2,0,Gravel,Wet,Police controlled,Unlit,DUMMY test record (Chattogram)
+2026-08-03 16:18,24.413904,88.551842,Injury,Side swipe,Human error,2,0,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-08-03 17:53,23.746266,90.369818,Injury,Hit pedestrian,Vehicle defect,1,0,0,2,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-03 18:35,23.784088,90.346111,Fatal,Right angle,Human error,2,2,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-08-03 20:13,23.881031,90.406602,Injury,Side swipe,Human error,2,1,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-04 15:58,24.856856,91.814710,Injury,Hit object in road,Vehicle defect,1,1,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-08-04 20:28,22.296254,91.767467,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-08-04 21:19,22.174568,91.717911,Injury,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,None,Unlit,DUMMY test record (Chattogram)
+2026-08-05 07:32,23.710979,90.434294,Injury,Rear end,Human error,2,0,2,0,Asphalt,Dry,Pedestrian crossing,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-08-05 19:19,24.372504,88.544053,Injury,Head on,Human error,2,0,2,0,Concrete,Dry,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-08-06 08:27,25.703960,89.281805,Property,Hit object off road,Human error,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Rangpur)
+2026-08-06 16:55,24.676091,90.405305,Injury,Rear end,Human error,2,1,1,0,Concrete,Dry,Centerline,Lit,DUMMY test record (Mymensingh)
+2026-08-06 17:57,25.763306,89.207177,Injury,Overturned vehicle,Vehicle defect,1,1,2,0,Asphalt,Wet,Centerline,Lit,DUMMY test record (Rangpur)
+2026-08-07 18:14,23.028166,89.290472,Property,Rear end,Road defect,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Khulna)
+2026-08-08 05:14,23.706120,90.519515,Injury,Hit pedestrian,Human error,1,0,0,1,Asphalt,Dry,None,Unlit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-08-08 12:23,22.390568,91.816814,Injury,Side swipe,Human error,2,1,1,0,Asphalt,Muddy,None,Lit,DUMMY test record (Chattogram)
+2026-08-08 14:06,23.773587,90.426392,Fatal,Rear end,Vehicle defect,2,0,2,0,Earth,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-08 18:00,24.927304,91.886133,Injury,Head on,Human error,2,0,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-08-08 19:30,22.413086,91.797394,Injury,Head on,Human error,2,0,2,0,Asphalt,Dry,Police controlled,Unlit,DUMMY test record (Chattogram)
+2026-08-08 20:03,23.010657,91.376001,Property,Rear end,Human error,3,0,0,0,Gravel,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-08-08 22:00,23.784142,90.344658,Injury,Hit pedestrian,Human error,1,1,2,1,Concrete,Wet,None,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-08-09 07:20,23.762970,90.350727,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-08-09 15:33,22.621398,91.661337,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-09 16:36,23.712849,90.435831,Property,Rear end,Human error,2,0,0,0,Asphalt,Muddy,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-08-09 18:56,22.915332,89.318620,Injury,Hit pedestrian,Human error,1,0,2,1,Asphalt,Muddy,Centerline,Lit,DUMMY test record (Khulna)
+2026-08-09 20:48,22.896779,89.182582,Injury,Side swipe,Human error,3,1,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Khulna)
+2026-08-10 06:20,23.809007,90.392766,Injury,Side swipe,Road defect,3,0,1,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-08-10 19:40,25.954099,89.179327,Injury,Head on,Road defect,2,0,2,0,Earth,Wet,Traffic lights,Lit,DUMMY test record (Rangpur)
+2026-08-11 06:12,23.859752,90.498312,Fatal,Rear end,Human error,2,0,1,0,Concrete,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-08-11 09:58,22.742344,90.342160,Property,Side swipe,Human error,2,0,0,0,Asphalt,Flooded,None,Lit,DUMMY test record (Barishal)
+2026-08-11 18:01,22.732806,90.457191,Property,Head on,Vehicle defect,2,0,0,0,Gravel,Dry,Centerline,Lit,DUMMY test record (Barishal)
+2026-08-11 19:35,23.674367,90.284523,Property,Hit pedestrian,Vehicle defect,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-08-12 07:24,25.656966,89.266486,Property,Head on,Road defect,2,0,0,0,Earth,Dry,Traffic lights,Lit,DUMMY test record (Rangpur)
+2026-08-12 08:31,23.756251,90.296886,Injury,Rear end,Human error,3,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-08-12 12:01,25.751358,89.224650,Injury,Head on,Human error,3,1,0,0,Gravel,Wet,None,Lit,DUMMY test record (Rangpur)
+2026-08-12 15:39,22.299317,91.802494,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-08-12 16:30,23.763674,90.492843,Injury,Head on,Human error,3,0,1,0,Asphalt,Muddy,None,Lit,DUMMY test record (Dhaka)
+2026-08-12 20:50,22.368652,91.815726,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Wet,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-08-13 07:39,25.736435,89.300930,Property,Side swipe,Vehicle defect,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-08-13 07:56,23.834421,90.289599,Fatal,Hit pedestrian,Human error,1,1,1,3,Earth,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-13 11:38,24.358465,88.674179,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-13 13:04,24.464039,88.766423,Injury,Side swipe,Road defect,2,0,1,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-08-14 08:06,22.770148,90.372538,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-08-14 09:04,23.731158,90.307377,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-08-14 09:43,22.935878,89.272421,Property,Head on,Road defect,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Khulna)
+2026-08-14 14:37,22.618319,91.662311,Fatal,Head on,Vehicle defect,2,1,4,0,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-14 18:27,23.804875,90.460353,Property,Head on,Human error,2,0,0,0,Concrete,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-15 10:55,22.620319,91.659725,Injury,Head on,Human error,2,1,1,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-15 15:28,22.657790,90.499084,Property,Side swipe,Human error,2,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Barishal)
+2026-08-16 10:25,22.408138,91.688303,Injury,Hit object in road,Road defect,1,1,1,0,Asphalt,Wet,None,Lit,DUMMY test record (Chattogram)
+2026-08-16 15:39,22.432016,91.776236,Injury,Hit pedestrian,Vehicle defect,1,1,0,2,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-08-17 13:10,23.700560,90.525501,Fatal,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-08-17 14:54,23.759447,90.284112,Injury,Rear end,Human error,2,1,1,0,Asphalt,Wet,Give way,Lit,DUMMY test record (Dhaka)
+2026-08-17 18:24,23.921811,90.449268,Injury,Hit pedestrian,Human error,1,1,2,2,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-18 00:02,22.840209,89.354555,Property,Rear end,Human error,2,0,0,0,Gravel,Muddy,None,Lit,DUMMY test record (Khulna)
+2026-08-18 06:01,22.406518,91.812886,Property,Right angle,Human error,3,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-08-18 09:56,23.721148,90.522322,Fatal,Rear end,Road defect,2,1,3,0,Gravel,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-08-18 13:28,24.422123,88.660874,Injury,Rear end,Human error,2,0,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-19 05:11,22.883691,89.334981,Property,Rear end,Road defect,3,0,0,0,Earth,Wet,None,Unlit,DUMMY test record (Khulna)
+2026-08-19 07:52,24.378886,88.626858,Injury,Hit pedestrian,Human error,1,1,0,2,Gravel,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-19 08:02,22.876538,89.213412,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Khulna)
+2026-08-19 12:58,22.597616,90.303002,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-08-19 13:32,23.995132,90.344646,Property,Hit pedestrian,Road defect,1,0,0,0,Gravel,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-08-19 14:49,23.011702,91.379843,Fatal,Rear end,Human error,3,1,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-08-20 09:05,23.782066,90.344682,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Wet,Centerline,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-08-20 14:26,23.793647,90.368138,Property,Head on,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-20 18:30,23.742358,90.442460,Property,Hit object off road,Human error,1,0,0,0,Concrete,Dry,Give way,Lit,DUMMY test record (Dhaka)
+2026-08-21 10:22,25.881604,89.236360,Fatal,Side swipe,Human error,3,2,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-08-21 12:02,24.801823,90.277625,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Wet,Police controlled,Lit,DUMMY test record (Mymensingh)
+2026-08-21 13:37,25.782027,89.155315,Injury,Hit pedestrian,Human error,1,1,1,2,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-08-21 14:09,22.400767,91.908925,Injury,Right angle,Human error,2,0,1,0,Concrete,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-08-21 17:19,23.622201,90.443224,Fatal,Side swipe,Human error,2,1,3,0,Gravel,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-08-23 13:05,23.748720,90.332072,Injury,Rear end,Road defect,3,1,0,0,Concrete,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-08-23 14:30,22.620747,91.661099,Fatal,Hit pedestrian,Human error,1,2,2,3,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-23 15:15,23.704091,90.519847,Injury,Head on,Human error,2,1,0,0,Concrete,Wet,Police controlled,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-08-23 22:27,23.009341,91.380868,Injury,Hit pedestrian,Human error,1,0,1,2,Earth,Muddy,None,Unlit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-08-24 10:00,24.467887,88.563448,Property,Hit object off road,Human error,1,0,0,0,Asphalt,Wet,Give way,Lit,DUMMY test record (Rajshahi)
+2026-08-24 10:39,23.781443,90.354542,Property,Rear end,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-24 17:13,23.714128,90.343953,Property,Side swipe,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-08-24 18:06,22.840049,89.182184,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Muddy,Centerline,Lit,DUMMY test record (Khulna)
+2026-08-24 21:44,22.839196,89.318657,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Khulna)
+2026-08-25 08:27,23.705979,90.521135,Injury,Head on,Human error,3,1,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-08-25 12:15,22.648663,90.228006,Property,Right angle,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-08-25 14:21,24.286497,88.707973,Property,Hit animal,Human error,1,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Rajshahi)
+2026-08-25 15:53,24.793232,90.346803,Injury,Head on,Road defect,2,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Mymensingh)
+2026-08-26 06:13,24.436646,88.581186,Injury,Side swipe,Human error,3,1,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-26 09:20,25.725833,89.283109,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-08-26 13:31,22.521107,91.839051,Property,Rear end,Road defect,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-08-26 16:36,22.622796,91.661323,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-26 19:44,24.402328,88.532939,Fatal,Hit pedestrian,Road defect,1,1,2,3,Concrete,Dry,None,Lit,DUMMY test record (Rajshahi)
+2026-08-26 22:45,22.635482,89.298467,Injury,Hit pedestrian,Human error,1,1,0,1,Gravel,Dry,None,Lit,DUMMY test record (Khulna)
+2026-08-27 23:10,23.704401,90.516985,Injury,Hit object off road,Vehicle defect,1,1,1,0,Asphalt,Wet,None,Unlit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-08-28 08:26,24.768244,90.411062,Fatal,Hit pedestrian,Human error,1,1,1,3,Asphalt,Wet,Centerline,Lit,DUMMY test record (Mymensingh)
+2026-08-28 08:26,22.932212,89.347900,Property,Right angle,Human error,2,0,0,0,Asphalt,Wet,Centerline,Lit,DUMMY test record (Khulna)
+2026-08-28 18:03,22.419104,91.701492,Injury,Rear end,Human error,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-08-28 18:22,22.272507,91.708230,Injury,Hit pedestrian,Human error,1,0,2,1,Earth,Wet,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-08-28 19:52,23.818388,90.370380,Injury,Hit parked vehicle,Human error,2,0,2,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-08-29 03:43,23.011399,91.379930,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Unlit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-08-29 06:49,25.809692,89.276316,Injury,Rear end,Road defect,2,1,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Rangpur)
+2026-08-29 10:05,22.621374,91.658846,Fatal,Side swipe,Human error,2,2,0,0,Asphalt,Muddy,Police controlled,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-08-29 11:03,22.745875,90.379954,Property,Hit animal,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-08-29 12:05,24.417800,88.533096,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Wet,Pedestrian crossing,Lit,DUMMY test record (Rajshahi)
+2026-08-30 17:26,23.748400,90.422995,Property,Head on,Human error,2,0,0,0,Gravel,Muddy,None,Lit,DUMMY test record (Dhaka)
+2026-08-30 19:33,24.750810,90.422661,Injury,Head on,Human error,2,1,0,0,Concrete,Dry,Traffic lights,Unlit,DUMMY test record (Mymensingh)
+2026-08-30 23:17,23.853638,90.390693,Injury,Hit object off road,Human error,1,1,0,0,Earth,Dry,Police controlled,Unlit,DUMMY test record (Dhaka)
+2026-08-31 22:01,22.701028,90.372579,Property,Rear end,Human error,3,0,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Barishal)
+2026-09-01 08:34,25.684204,89.205131,Property,Hit object in road,Road defect,1,0,0,0,Gravel,Wet,Traffic lights,Lit,DUMMY test record (Rangpur)
+2026-09-01 09:27,23.801266,90.284006,Property,Hit animal,Human error,1,0,0,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-09-01 10:53,24.894972,91.788395,Property,Rear end,Human error,3,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-09-02 09:33,22.436978,91.805563,Injury,Overturned vehicle,Human error,1,1,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-09-02 16:36,23.704152,90.519654,Injury,Overturned vehicle,Human error,1,0,1,0,Asphalt,Flooded,Police controlled,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-09-03 13:56,22.357460,91.829533,Injury,Side swipe,Human error,2,0,2,0,Concrete,Muddy,None,Lit,DUMMY test record (Chattogram)
+2026-09-03 16:32,23.713394,90.435579,Property,Hit object in road,Vehicle defect,1,0,0,0,Earth,Dry,Centerline,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-09-03 19:07,23.757710,90.337718,Injury,Rear end,Human error,2,1,0,0,Concrete,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-09-04 03:21,23.782741,90.464968,Injury,Side swipe,Human error,2,0,1,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-09-04 07:20,22.799976,90.310342,Injury,Head on,Vehicle defect,3,0,2,0,Asphalt,Wet,None,Lit,DUMMY test record (Barishal)
+2026-09-04 17:28,23.835922,90.375270,Injury,Rear end,Human error,2,0,1,0,Earth,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-09-05 08:38,22.866578,89.247591,Injury,Rear end,Human error,2,1,1,0,Asphalt,Dry,Centerline,Lit,DUMMY test record (Khulna)
+2026-09-05 20:03,22.847972,89.145475,Injury,Head on,Human error,2,0,1,0,Asphalt,Wet,Traffic lights,Unlit,DUMMY test record (Khulna)
+2026-09-06 07:44,22.244892,91.807946,Injury,Overturned vehicle,Road defect,1,1,0,0,Asphalt,Wet,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-09-06 13:24,22.631555,90.322916,Injury,Side swipe,Human error,2,1,0,0,Concrete,Dry,Traffic lights,Lit,DUMMY test record (Barishal)
+2026-09-06 14:29,23.783218,90.344851,Injury,Rear end,Human error,2,1,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-07 12:21,25.617371,89.270018,Injury,Rear end,Human error,2,1,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-09-07 13:12,23.642360,90.273034,Fatal,Rear end,Human error,3,0,3,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-07 15:52,24.376754,88.629668,Injury,Side swipe,Human error,2,1,2,0,Concrete,Dry,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-09-08 09:26,23.705655,90.517742,Injury,Rear end,Human error,2,0,2,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-09-08 12:11,22.493838,91.674618,Property,Side swipe,Vehicle defect,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Chattogram)
+2026-09-08 20:15,23.783970,90.344633,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Centerline,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-09 15:08,23.782341,90.344655,Fatal,Overturned vehicle,Human error,1,0,2,0,Asphalt,Flooded,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-09 15:13,23.799017,90.320090,Injury,Right angle,Human error,2,1,1,0,Asphalt,Wet,Centerline,Lit,DUMMY test record (Dhaka)
+2026-09-09 16:03,23.868329,90.512375,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-09 23:42,24.377121,88.579086,Fatal,Head on,Human error,3,0,1,0,Asphalt,Dry,None,Unlit,DUMMY test record (Rajshahi)
+2026-09-10 18:50,23.751055,90.273529,Injury,Hit pedestrian,Human error,1,1,0,1,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-11 05:45,24.408378,88.599062,Injury,Rear end,Human error,3,1,2,0,Asphalt,Wet,None,Unlit,DUMMY test record (Rajshahi)
+2026-09-11 16:33,23.712742,90.434872,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-09-12 07:26,25.764788,89.447915,Injury,Hit pedestrian,Human error,1,1,2,2,Asphalt,Dry,None,Lit,DUMMY test record (Rangpur)
+2026-09-12 07:39,24.763731,91.896439,Injury,Hit pedestrian,Vehicle defect,1,1,0,2,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-09-12 12:29,23.484466,90.468178,Injury,Rear end,Vehicle defect,3,0,2,0,Concrete,Dry,Centerline,Lit,DUMMY test record (Dhaka)
+2026-09-12 17:31,23.787880,90.362362,Property,Side swipe,Human error,2,0,0,0,Asphalt,Muddy,None,Lit,DUMMY test record (Dhaka)
+2026-09-12 18:46,23.829623,90.255740,Injury,Side swipe,Road defect,2,1,1,0,Concrete,Wet,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-09-12 18:58,23.007895,91.380119,Property,Rear end,Human error,3,0,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-09-13 04:57,23.840891,90.407094,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-13 08:00,22.315165,91.926856,Property,Rear end,Human error,3,0,0,0,Concrete,Wet,Centerline,Lit,DUMMY test record (Chattogram)
+2026-09-13 12:27,23.780387,90.334315,Injury,Head on,Human error,2,0,2,0,Asphalt,Dry,Pedestrian crossing,Lit,DUMMY test record (Dhaka)
+2026-09-13 19:03,23.780716,90.344372,Property,Rear end,Human error,2,0,0,0,Concrete,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-14 09:55,24.798531,90.384568,Injury,Head on,Human error,3,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Mymensingh)
+2026-09-14 16:51,24.888755,91.926387,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-09-14 19:58,24.828700,90.393721,Injury,Side swipe,Vehicle defect,2,0,2,0,Asphalt,Wet,None,Unlit,DUMMY test record (Mymensingh)
+2026-09-15 08:14,23.691147,90.254024,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-15 09:10,23.844859,90.399501,Injury,Rear end,Human error,2,1,0,0,Earth,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-15 16:52,23.781626,90.342207,Property,Head on,Human error,3,0,0,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-17 10:16,23.772447,90.417404,Injury,Rear end,Human error,3,1,2,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-17 13:30,23.796357,90.416030,Injury,Head on,Human error,3,1,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-17 15:02,22.876833,89.277863,Property,Head on,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Khulna)
+2026-09-17 16:55,23.811688,90.477697,Fatal,Hit pedestrian,Human error,1,0,0,3,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-09-17 17:07,22.314845,91.796789,Property,Rear end,Human error,2,0,0,0,Earth,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-09-17 17:34,22.310617,91.698061,Injury,Rear end,Human error,2,0,1,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-09-17 18:38,24.938335,91.860702,Property,Hit pedestrian,Human error,1,0,0,0,Concrete,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-09-18 02:37,24.800374,91.803281,Property,Hit pedestrian,Road defect,1,0,0,0,Asphalt,Dry,None,Unlit,DUMMY test record (Sylhet)
+2026-09-18 08:57,23.784441,90.345739,Property,Hit pedestrian,Vehicle defect,1,0,0,0,Asphalt,Dry,Traffic lights,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-18 10:40,23.010026,91.380422,Injury,Hit parked vehicle,Human error,2,0,1,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-09-18 21:46,24.454900,88.647124,Injury,Side swipe,Human error,2,1,0,0,Asphalt,Dry,Give way,Lit,DUMMY test record (Rajshahi)
+2026-09-19 16:51,23.660725,90.342447,Property,Hit parked vehicle,Human error,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-19 21:15,22.234297,91.677704,Injury,Head on,Human error,2,1,0,0,Asphalt,Wet,Give way,Lit,DUMMY test record (Chattogram)
+2026-09-20 06:34,23.851723,90.467076,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-20 10:55,24.734955,90.324372,Injury,Hit object off road,Human error,1,1,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Mymensingh)
+2026-09-20 19:08,22.445455,91.863561,Injury,Hit pedestrian,Human error,1,0,0,2,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-09-21 11:57,25.088258,91.905104,Injury,Hit object off road,Human error,1,0,2,0,Asphalt,Wet,None,Lit,DUMMY test record (Sylhet)
+2026-09-21 12:07,22.619166,91.659344,Fatal,Hit object in road,Road defect,1,1,2,0,Asphalt,Dry,Centerline,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-09-21 13:16,23.711812,90.438064,Property,Head on,Road defect,3,0,0,0,Asphalt,Dry,Police controlled,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-09-21 14:37,23.703776,90.519589,Injury,Rear end,Vehicle defect,2,0,1,0,Concrete,Wet,None,Lit,"DUMMY test record (hotspot: Kanchpur Bridge, Dhaka)"
+2026-09-21 16:17,23.783896,90.347084,Property,Side swipe,Road defect,3,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-22 00:43,23.723007,90.428924,Injury,Rear end,Human error,2,1,0,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-22 10:04,24.916696,91.850183,Injury,Side swipe,Human error,2,1,0,0,Earth,Dry,Traffic lights,Lit,DUMMY test record (Sylhet)
+2026-09-22 19:27,24.814028,91.699609,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-09-23 09:10,22.619715,91.661305,Property,Right angle,Human error,3,0,0,0,Asphalt,Wet,Police controlled,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-09-23 14:55,23.770864,90.593986,Injury,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-23 17:50,22.344307,91.851280,Fatal,Rear end,Human error,2,2,4,0,Gravel,Dry,Traffic lights,Lit,DUMMY test record (Chattogram)
+2026-09-23 19:45,23.718750,90.477226,Injury,Overturned vehicle,Road defect,1,0,1,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-24 05:47,24.815959,91.930118,Injury,Side swipe,Human error,2,0,1,0,Asphalt,Wet,None,Unlit,DUMMY test record (Sylhet)
+2026-09-24 07:23,23.563567,90.451717,Property,Side swipe,Human error,2,0,0,0,Earth,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-24 09:15,24.374350,88.586787,Property,Right angle,Human error,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Rajshahi)
+2026-09-24 10:28,24.937817,91.764671,Injury,Rear end,Vehicle defect,2,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-09-24 22:18,23.947754,90.429048,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-09-24 23:10,23.799400,90.262883,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,None,Unlit,DUMMY test record (Dhaka)
+2026-09-25 14:53,22.716234,90.476070,Property,Rear end,Vehicle defect,2,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Barishal)
+2026-09-27 12:48,23.905763,90.436440,Property,Head on,Human error,3,0,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-09-27 19:57,23.784799,90.345435,Injury,Side swipe,Human error,2,0,1,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-27 21:27,23.796026,90.415702,Injury,Head on,Human error,2,1,2,0,Asphalt,Flooded,Traffic lights,Unlit,DUMMY test record (Dhaka)
+2026-09-28 08:12,24.725924,90.380932,Fatal,Hit pedestrian,Human error,1,2,4,3,Asphalt,Wet,None,Lit,DUMMY test record (Mymensingh)
+2026-09-28 08:52,23.777931,90.345878,Injury,Head on,Human error,2,0,2,0,Asphalt,Wet,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-09-28 11:43,24.447757,88.525941,Property,Hit pedestrian,Human error,1,0,0,0,Earth,Dry,Centerline,Lit,DUMMY test record (Rajshahi)
+2026-09-28 13:46,22.707329,89.249419,Property,Side swipe,Human error,3,0,0,0,Earth,Wet,None,Lit,DUMMY test record (Khulna)
+2026-09-28 21:11,23.949789,90.211349,Injury,Head on,Road defect,2,0,2,0,Concrete,Wet,None,Lit,DUMMY test record (Dhaka)
+2026-09-29 07:50,23.781601,90.327824,Injury,Right angle,Human error,3,0,2,0,Asphalt,Wet,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-29 11:48,23.009315,91.380417,Property,Head on,Human error,3,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Dhaka-Chattogram Hwy, Feni)"
+2026-09-29 15:13,22.904058,89.322925,Property,Head on,Human error,3,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Khulna)
+2026-09-29 18:22,23.768348,90.305687,Property,Head on,Vehicle defect,2,0,0,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
+2026-09-29 18:59,23.710546,90.436057,Property,Overturned vehicle,Human error,1,0,0,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Jatrabari, Dhaka)"
+2026-09-30 08:17,22.355991,91.794288,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Wet,None,Lit,DUMMY test record (Chattogram)
+2026-09-30 11:25,24.852865,91.818155,Property,Hit pedestrian,Human error,1,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Sylhet)
+2026-09-30 12:14,22.777974,90.309908,Injury,Overturned vehicle,Vehicle defect,1,0,1,0,Concrete,Wet,None,Lit,DUMMY test record (Barishal)
+2026-09-30 15:57,23.760813,90.511889,Property,Side swipe,Human error,3,0,0,0,Concrete,Dry,None,Lit,DUMMY test record (Dhaka)
+2026-09-30 17:24,24.726514,91.767082,Injury,Rear end,Human error,2,1,0,0,Concrete,Wet,Centerline,Lit,DUMMY test record (Sylhet)
+2026-10-01 04:56,23.784374,90.346307,Property,Rear end,Human error,2,0,0,0,Asphalt,Dry,Traffic lights,Unlit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-10-01 07:32,22.617702,91.660840,Injury,Hit pedestrian,Human error,1,0,1,1,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Sitakunda, Chattogram)"
+2026-10-01 10:19,25.755853,89.279182,Injury,Rear end,Human error,2,0,2,0,Concrete,Dry,Police controlled,Lit,DUMMY test record (Rangpur)
+2026-10-01 15:19,22.663679,90.336663,Injury,Hit animal,Human error,1,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Barishal)
+2026-10-02 00:21,23.567249,90.515435,Injury,Side swipe,Human error,3,1,0,0,Asphalt,Dry,Traffic lights,Lit,DUMMY test record (Dhaka)
+2026-10-02 08:44,22.268185,91.786704,Injury,Rear end,Human error,3,1,2,0,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-10-02 10:41,24.410881,88.631622,Property,Right angle,Human error,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Rajshahi)
+2026-10-02 10:58,22.317208,91.787529,Injury,Hit pedestrian,Human error,1,1,0,2,Asphalt,Dry,None,Lit,DUMMY test record (Chattogram)
+2026-10-02 18:03,23.782730,90.345040,Injury,Right angle,Human error,2,1,2,0,Asphalt,Dry,None,Lit,"DUMMY test record (hotspot: Gabtoli, Dhaka)"
+2026-10-03 17:08,24.803266,91.862020,Property,Side swipe,Human error,2,0,0,0,Asphalt,Dry,None,Lit,DUMMY test record (Sylhet)
+2026-10-03 21:31,23.726543,90.310149,Property,Hit parked vehicle,Human error,2,0,0,0,Asphalt,Dry,Police controlled,Lit,DUMMY test record (Dhaka)
