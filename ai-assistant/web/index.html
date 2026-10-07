@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DRIVER AI assistant</title>
+<style>
+  :root {
+    --bg: #f4f6f8; --card: #ffffff; --text: #1f2933; --muted: #616e7c; --line: #dde3ea;
+    --accent: #1d6fb8; --accent-soft: #e6f0fa; --user: #1d6fb8; --warn: #a15c00; --warn-soft: #fff4e0;
+    --error: #b42318; --error-soft: #fdecea; --bar: #9cc3e6;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; font: 14px/1.45 -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+         background: var(--bg); color: var(--text); display: flex; flex-direction: column; }
+  header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .bar { max-width: 1200px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 10px; }
+  header h1 { font-size: 17px; margin: 0; }
+  .badge { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 10px; padding: 1px 8px; }
+  .lock { font-size: 12px; color: var(--muted); margin-left: auto; }
+  main { flex: 1; overflow-y: auto; }
+  .thread { max-width: 1200px; margin: 0 auto; padding: 16px; }
+  .welcome { text-align: center; color: var(--muted); padding: 40px 10px 10px; }
+  .welcome h2 { color: var(--text); font-size: 20px; margin: 0 0 6px; }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 14px 0; }
+  .chip { font-size: 13px; padding: 4px 12px; border-radius: 14px; background: var(--card);
+          border: 1px solid var(--line); color: var(--muted); cursor: pointer; }
+  .chip:hover { color: var(--accent); border-color: var(--accent); }
+  .msg-user { display: flex; justify-content: flex-end; margin: 14px 0 8px; }
+  .msg-user div { background: var(--user); color: #fff; padding: 8px 12px; border-radius: 14px 14px 2px 14px;
+                  max-width: 75%; white-space: pre-wrap; }
+  .msg-ai { background: var(--card); border: 1px solid var(--line); border-radius: 2px 12px 12px 12px;
+            padding: 12px; margin-bottom: 8px; }
+  .part + .part { border-top: 1px dashed var(--line); margin-top: 14px; padding-top: 14px; }
+  .partq { color: var(--muted); font-size: 12.5px; font-style: italic; margin-bottom: 2px; }
+  .answer { font-size: 15px; font-weight: 600; margin: 2px 0 6px; }
+  .understood { color: var(--muted); font-size: 12.5px; margin-bottom: 6px; }
+  .understood b { color: var(--accent); font-weight: 600; }
+  .note { background: var(--warn-soft); color: var(--warn); border-radius: 6px; padding: 5px 9px; margin: 4px 0; font-size: 13px; }
+  .error { background: var(--error-soft); color: var(--error); border-radius: 6px; padding: 9px; }
+  .tools { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--card); color: var(--text);
+           padding: 5px 11px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-size: 14px; padding: 9px 16px; }
+  button:disabled { opacity: .55; cursor: default; }
+  .tablewrap { overflow: auto; max-height: 340px; border: 1px solid var(--line); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+  th, td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+  th { position: sticky; top: 0; background: #eef2f6; font-weight: 600; z-index: 1; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.wide { white-space: normal; min-width: 220px; }
+  .barcell { position: relative; min-width: 160px; }
+  .barfill { position: absolute; left: 0; top: 4px; bottom: 4px; background: var(--bar); border-radius: 3px; opacity: .55; }
+  .barcell span { position: relative; }
+  pre { background: #0f1720; color: #d7e0ea; padding: 8px; border-radius: 6px; overflow: auto; font-size: 12px; white-space: pre-wrap; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--line);
+             border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: -2px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  a.rec { color: var(--accent); }
+  footer { background: var(--card); border-top: 1px solid var(--line); }
+  .ask { max-width: 1200px; margin: 0 auto; padding: 10px 16px 12px; display: flex; gap: 8px; align-items: flex-end; }
+  .ask textarea { flex: 1; font: inherit; font-size: 15px; padding: 9px 12px; border: 1px solid var(--line);
+                  border-radius: 8px; resize: none; max-height: 140px; min-height: 42px; }
+  .ask textarea:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+  .hint { max-width: 1200px; margin: -6px auto 0; padding: 0 16px 8px; color: var(--muted); font-size: 11.5px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <h1>Ask the AI assistant</h1>
+    <span class="badge" id="model">…</span>
+    <span class="lock">Read-only: looks up data, never changes it</span>
+    <button id="newchat" title="Forget this conversation and start again">New chat</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="thread" id="thread">
+    <div class="welcome" id="welcome">
+      <h2>What would you like to know about the crashes?</h2>
+      <div>Ask in plain English. You can ask follow-up questions such as “only in Dhaka” or “what about 2024?”.</div>
+      <div class="chips" id="chips"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <form class="ask" id="form">
+    <textarea id="q" rows="1" maxlength="500" placeholder="Ask a question, or a follow-up…" autofocus></textarea>
+    <button class="primary" id="go" type="submit">Ask</button>
+  </form>
+  <div class="hint">Enter to send · Shift+Enter for a new line · answers come straight from DRIVER’s database; check the “Understood as” line</div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var API = location.port === "8800" ? "" : "http://localhost:8800";
+  var EXAMPLES = [
+    "number of crashes by severity",
+    "fatal crashes in Dhaka in 2025",
+    "crashes per month in 2026",
+    "how many pedestrians were killed last year and where",
+    "top 5 black spots",
+    "total deaths per division",
+    "which vehicle types are involved most",
+    "crashes by hour of the day"
+  ];
+  var $ = function (id) { return document.getElementById(id); };
+  var history = [];      // [{question, plans}] sent with each question so follow-ups work
+  var busy = false;
+
+  function esc(v) {
+    return String(v === null || v === undefined ? "" : v)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function scrollDown() { var m = $("main"); m.scrollTop = m.scrollHeight; }
+
+  EXAMPLES.forEach(function (e) {
+    var c = document.createElement("span");
+    c.className = "chip"; c.textContent = e;
+    c.onclick = function () { $("q").value = e; ask(); };
+    $("chips").appendChild(c);
+  });
+
+  fetch(API + "/api/health").then(function (r) { return r.json(); }).then(function (h) {
+    $("model").textContent = "model: " + h.model;
+  }).catch(function () { $("model").textContent = "assistant not running"; });
+
+  $("form").onsubmit = function (e) { e.preventDefault(); ask(); };
+  $("q").addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(); }
+  });
+  $("q").addEventListener("input", function () {
+    this.style.height = "auto"; this.style.height = Math.min(this.scrollHeight, 140) + "px";
+  });
+  $("newchat").onclick = function () {
+    history = [];
+    $("thread").innerHTML = "";
+    $("thread").appendChild(welcome);
+    welcome.hidden = false;
+    $("q").focus();
+  };
+  var welcome = $("welcome");
+
+  function ask() {
+    var q = $("q").value.trim();
+    if (!q || busy) return;
+    busy = true; $("go").disabled = true;
+    welcome.hidden = true;
+    $("q").value = ""; $("q").style.height = "auto";
+
+    var u = document.createElement("div");
+    u.className = "msg-user"; u.innerHTML = "<div>" + esc(q) + "</div>";
+    $("thread").appendChild(u);
+    var a = document.createElement("div");
+    a.className = "msg-ai";
+    a.innerHTML = '<span class="spinner"></span> Looking it up…';
+    $("thread").appendChild(a);
+    scrollDown();
+
+    fetch(API + "/api/ask", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({question: q, history: history})
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      render(a, res);
+      if (res.ok) history = history.concat([{question: q, plans: res.plans}]).slice(-3);
+    }).catch(function (err) {
+      render(a, {ok: false, error: "Cannot reach the assistant (" + err + "). Is 'driver-ai serve' running?"});
+    }).finally(function () {
+      busy = false; $("go").disabled = false; $("q").focus(); scrollDown();
+    });
+  }
+
+  function render(box, res) {
+    if (!res.ok) {
+      box.innerHTML = '<div class="error">' + esc(res.error) + '</div>' +
+        '<p class="muted">Try rephrasing, or use the names DRIVER uses (a division, a vehicle type, a severity).</p>';
+      return;
+    }
+    var h = "";
+    (res.notes || []).forEach(function (n) { h += '<div class="note">' + esc(n) + '</div>'; });
+    res.results.forEach(function (r, i) {
+      h += '<div class="part" data-i="' + i + '">';
+      if (r.part) h += '<div class="partq">“' + esc(r.part) + '”</div>';
+      h += '<div class="answer">' + esc(r.summary) + '</div>';
+      h += '<div class="understood"><b>Understood as:</b> ' + esc(r.understood) + '</div>';
+      (r.warnings || []).forEach(function (w) { h += '<div class="note">' + esc(w) + '</div>'; });
+      var single = r.action !== "list" && r.rows.length === 1 && r.headers.length === 1;   // already in the answer
+      if (r.rows.length && !single) h += table(r, res.driver_url);
+      h += '<div class="tools"><button data-x="csv">Export CSV</button><button data-x="xlsx">Export Excel</button>' +
+           '<button data-x="sql">Show SQL</button></div>';
+      h += '<pre hidden>' + esc(r.sql) + '</pre>';
+      h += '</div>';
+    });
+    h += '<div class="muted">Answered in ' + res.seconds + ' s</div>';
+    box.innerHTML = h;
+    Array.prototype.forEach.call(box.querySelectorAll(".part"), function (part) {
+      var r = res.results[Number(part.getAttribute("data-i"))];
+      part.querySelector('[data-x="csv"]').onclick = function () { exportAs(this, r, res.question, "csv"); };
+      part.querySelector('[data-x="xlsx"]').onclick = function () { exportAs(this, r, res.question, "xlsx"); };
+      part.querySelector('[data-x="sql"]').onclick = function () {
+        var p = part.querySelector("pre"); p.hidden = !p.hidden; this.textContent = p.hidden ? "Show SQL" : "Hide SQL";
+      };
+    });
+  }
+
+  function table(r, driverUrl) {
+    var ridIdx = r.headers.indexOf("Record ID");
+    var isNum = r.headers.map(function (_, i) {
+      return r.rows.every(function (row) { return row[i] === null || typeof row[i] === "number"; });
+    });
+    var valueIdx = r.action === "list" ? -1 : r.headers.length - 1;
+    var max = 0;
+    if (valueIdx >= 0) r.rows.forEach(function (row) { max = Math.max(max, Number(row[valueIdx]) || 0); });
+    var h = '<div class="tablewrap"><table><thead><tr>';
+    r.headers.forEach(function (c) { h += '<th>' + esc(c) + '</th>'; });
+    h += '</tr></thead><tbody>';
+    r.rows.forEach(function (row) {
+      h += '<tr>';
+      row.forEach(function (v, i) {
+        if (i === ridIdx && v) {
+          h += '<td><a class="rec" target="_blank" rel="noopener" href="' + esc(driverUrl) +
+               '/#!/record/' + esc(v) + '/details">open</a></td>';
+        } else if (i === valueIdx && r.rows.length > 1) {
+          var w = max ? Math.round(100 * (Number(v) || 0) / max) : 0;
+          h += '<td class="num barcell"><div class="barfill" style="width:' + w + '%"></div><span>' + esc(v) + '</span></td>';
+        } else {
+          var wide = typeof v === "string" && v.length > 40;
+          h += '<td class="' + (isNum[i] ? "num" : wide ? "wide" : "") + '">' + esc(v) + '</td>';
+        }
+      });
+      h += '</tr>';
+    });
+    return h + '</tbody></table></div>';
+  }
+
+  function exportAs(btn, r, question, fmt) {
+    btn.disabled = true;
+    fetch(API + "/api/export", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({plan: r.plan, format: fmt, question: question})
+    }).then(function (resp) {
+      if (!resp.ok) return resp.json().then(function (j) { throw new Error(j.error); });
+      var m = /filename="([^"]+)"/.exec(resp.headers.get("Content-Disposition") || "");
+      return resp.blob().then(function (b) { return {blob: b, name: m ? m[1] : "driver-ai." + fmt}; });
+    }).then(function (f) {
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(f.blob); a.download = f.name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 5000);
+    }).catch(function (e) {
+      var n = document.createElement("div"); n.className = "note"; n.textContent = "Export failed: " + e.message;
+      btn.parentNode.after(n);
+    }).finally(function () { btn.disabled = false; });
+  }
+})();
+</script>
+</body>
+</html>

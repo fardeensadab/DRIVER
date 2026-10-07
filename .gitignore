@@ -86,3 +86,6 @@ install.log
 logs/
 _local/
 app/_loaders/
+ai-assistant/.ai_db.json
+ai-assistant/logs/
+ai-assistant/__pycache__/

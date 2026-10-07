@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Runs the DRIVER AI assistant with its own Python environment (~/driver-ai-venv).
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PY="$HOME/driver-ai-venv/bin/python"
+if [ ! -x "$PY" ]; then
+  echo "The assistant's Python environment is missing. Create it with:"
+  echo "  uv venv --python 3.10 ~/driver-ai-venv"
+  echo "  uv pip install --python ~/driver-ai-venv/bin/python psycopg2-binary openpyxl"
+  exit 1
+fi
+cd "$DIR" && exec "$PY" driver_ai.py "$@"
